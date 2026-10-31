@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-31",
+  "unit": {
+    "repository": "https://github.com/1ASI0732-2620-9082-Aether-System/KairoLabs-Frontend",
+    "source_commit": "c5f7b0037865e6ae482687e02639c579ba9616b6",
+    "command": "npm run test:unit",
+    "executed": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "integration": {
+    "repository": "https://github.com/1ASI0732-2620-9082-Aether-System/KairoLabs-Platform",
+    "source_commit": "b3b94e0b7852e7c31239309abab72ceb9a6b32d9",
+    "command": "npm test",
+    "executed": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "files_sha256": {
+    "KairoLabs-Frontend/tests/unit/core-entities.test.mjs": "b9ca573f0e72516401dd915427fb11e3a414c0a49fadfdcae96eefb3140167c6",
+    "KairoLabs-Frontend/src/monitoring/domain/model/device.entity.js": "f304fc205777d2546316d197c1ccf73a4fb29571e0e21ec52b2b840479e7bd9b",
+    "KairoLabs-Platform/tests/integration.test.mjs": "b5cd32eb198ba9530b9e98ebc96f78d3004e295927cd53c62099db27ca81fb06",
+    "KairoLabs-Platform/backend/TechnoByteLambders.MediTrackSensor.Platform/Program.cs": "a75edd789eb3a93d749d22c8bba21c1dad1bcbc3d2d02842114451e26caeeda4",
+    "KairoLabs-Platform/backend/TechnoByteLambders.MediTrackSensor.Platform/Iam/Interfaces/REST/UsersController.cs": "50a3a967bda59841cf346ec6bfe61849c13cf03e040a8cfe75d9989df6f4fadf"
+  }
+}

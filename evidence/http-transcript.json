@@ -16,27 +16,27 @@
     "request": {
       "name": "Integration admin",
       "dni": "00000000",
-      "email": "it-admin-mvwtc50m@example.invalid",
+      "email": "it-admin-mvwtdtxl@example.invalid",
       "phone": "900000000",
       "job_title": "Pruebas",
       "entry_date": "2026-10-30",
       "role": "Admin",
       "password": "[REDACTED]",
       "photo": "",
-      "entity_name": "Entidad IT mvwtc50m"
+      "entity_name": "Entidad IT mvwtdtxl"
     },
     "status": 201,
     "response": {
       "id": 1,
       "name": "Integration admin",
       "dni": "00000000",
-      "email": "it-admin-mvwtc50m@example.invalid",
+      "email": "it-admin-mvwtdtxl@example.invalid",
       "phone": "900000000",
       "job_title": "Pruebas",
       "entry_date": "2026-10-30",
       "role": "Admin",
       "photo": "",
-      "created_at": "2026-10-31T19:47:35.9573627+00:00"
+      "created_at": "2026-10-31T19:48:54.880475+00:00"
     },
     "corsOrigin": null
   },
@@ -44,7 +44,7 @@
     "method": "POST",
     "path": "/api/v1/users/sign-in",
     "request": {
-      "email": "it-admin-mvwtc50m@example.invalid",
+      "email": "it-admin-mvwtdtxl@example.invalid",
       "password": "[REDACTED]"
     },
     "status": 200,
@@ -53,13 +53,13 @@
         "id": 1,
         "name": "Integration admin",
         "dni": "00000000",
-        "email": "it-admin-mvwtc50m@example.invalid",
+        "email": "it-admin-mvwtdtxl@example.invalid",
         "phone": "900000000",
         "job_title": "Pruebas",
         "entry_date": "2026-10-30",
         "role": "Admin",
         "photo": "",
-        "created_at": "2026-10-31T19:47:36+00:00"
+        "created_at": "2026-10-31T19:48:55+00:00"
       },
       "token": "[REDACTED]"
     },
@@ -72,7 +72,7 @@
     "response": [
       {
         "id": 1,
-        "entity_name": "Entidad IT mvwtc50m",
+        "entity_name": "Entidad IT mvwtdtxl",
         "entity_code": "ENT-1",
         "schedule": "",
         "user_id": 1
@@ -86,7 +86,7 @@
     "request": {
       "name": "Integration operator",
       "dni": "00000000",
-      "email": "it-operator-mvwtc50m@example.invalid",
+      "email": "it-operator-mvwtdtxl@example.invalid",
       "phone": "900000000",
       "job_title": "Pruebas",
       "entry_date": "2026-10-30",
@@ -99,13 +99,13 @@
       "id": 2,
       "name": "Integration operator",
       "dni": "00000000",
-      "email": "it-operator-mvwtc50m@example.invalid",
+      "email": "it-operator-mvwtdtxl@example.invalid",
       "phone": "900000000",
       "job_title": "Pruebas",
       "entry_date": "2026-10-30",
       "role": "Operator",
       "photo": "",
-      "created_at": "2026-10-31T19:47:36.8587487+00:00"
+      "created_at": "2026-10-31T19:48:55.7836906+00:00"
     },
     "corsOrigin": null
   },
@@ -115,7 +115,7 @@
     "request": {
       "establishment_name": "Sede IT A",
       "establishment_type": "Warehouse",
-      "address": "Dirección sintética 100",
+      "address": "DirecciÃ³n sintÃ©tica 100",
       "district": "Pruebas",
       "city_region": "Lima",
       "country": "Peru",
@@ -130,7 +130,7 @@
       "id": 1,
       "establishment_name": "Sede IT A",
       "establishment_type": "Warehouse",
-      "address": "Dirección sintética 100",
+      "address": "DirecciÃ³n sintÃ©tica 100",
       "district": "Pruebas",
       "city_region": "Lima",
       "country": "Peru",
@@ -140,7 +140,7 @@
       "latitude": -12.04,
       "longitude": -77.03,
       "admin_id": 1,
-      "created_at": "2026-10-31T19:47:36.9220091+00:00"
+      "created_at": "2026-10-31T19:48:55.8475459+00:00"
     },
     "corsOrigin": null
   },
@@ -150,7 +150,7 @@
     "request": {
       "establishment_name": "Sede IT B",
       "establishment_type": "Warehouse",
-      "address": "Dirección sintética 100",
+      "address": "DirecciÃ³n sintÃ©tica 100",
       "district": "Pruebas",
       "city_region": "Lima",
       "country": "Peru",
@@ -165,7 +165,7 @@
       "id": 2,
       "establishment_name": "Sede IT B",
       "establishment_type": "Warehouse",
-      "address": "Dirección sintética 100",
+      "address": "DirecciÃ³n sintÃ©tica 100",
       "district": "Pruebas",
       "city_region": "Lima",
       "country": "Peru",
@@ -175,7 +175,7 @@
       "latitude": -12.04,
       "longitude": -77.03,
       "admin_id": 1,
-      "created_at": "2026-10-31T19:47:36.9662009+00:00"
+      "created_at": "2026-10-31T19:48:55.8893078+00:00"
     },
     "corsOrigin": null
   },
@@ -201,7 +201,7 @@
       "atmospheric_pressure": 0,
       "suspended_particles": 0,
       "establishment_id": 1,
-      "created_at": "2026-10-31T19:47:37.0053399+00:00",
+      "created_at": "2026-10-31T19:48:55.9280238+00:00",
       "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
     },
     "corsOrigin": null
@@ -210,7 +210,7 @@
     "method": "POST",
     "path": "/api/v1/users/sign-in",
     "request": {
-      "email": "it-admin-mvwtc50m@example.invalid",
+      "email": "it-admin-mvwtdtxl@example.invalid",
       "password": "[REDACTED]"
     },
     "status": 200,
@@ -219,13 +219,13 @@
         "id": 1,
         "name": "Integration admin",
         "dni": "00000000",
-        "email": "it-admin-mvwtc50m@example.invalid",
+        "email": "it-admin-mvwtdtxl@example.invalid",
         "phone": "900000000",
         "job_title": "Pruebas",
         "entry_date": "2026-10-30",
         "role": "Admin",
         "photo": "",
-        "created_at": "2026-10-31T19:47:36+00:00"
+        "created_at": "2026-10-31T19:48:55+00:00"
       },
       "token": "[REDACTED]"
     },
@@ -235,7 +235,7 @@
     "method": "POST",
     "path": "/api/v1/users/sign-in",
     "request": {
-      "email": "it-admin-mvwtc50m@example.invalid",
+      "email": "it-admin-mvwtdtxl@example.invalid",
       "password": "[REDACTED]"
     },
     "status": 401,
@@ -245,7 +245,7 @@
       "status": 401,
       "detail": "Invalid email or password.",
       "instance": "/api/v1/users/sign-in",
-      "traceId": "00-6cb2fca97740b807b29e9b897f5f7065-45ad4e4e304bea1a-00"
+      "traceId": "00-a86abb8f1d2b5ac31dc20c9dd5c095b8-e89315ae29543422-00"
     },
     "corsOrigin": null
   },
@@ -258,7 +258,7 @@
         "id": 1,
         "establishment_name": "Sede IT A",
         "establishment_type": "Warehouse",
-        "address": "Dirección sintética 100",
+        "address": "DirecciÃ³n sintÃ©tica 100",
         "district": "Pruebas",
         "city_region": "Lima",
         "country": "Peru",
@@ -268,13 +268,13 @@
         "latitude": -12.04,
         "longitude": -77.03,
         "admin_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00"
+        "created_at": "2026-10-31T19:48:56+00:00"
       },
       {
         "id": 2,
         "establishment_name": "Sede IT B",
         "establishment_type": "Warehouse",
-        "address": "Dirección sintética 100",
+        "address": "DirecciÃ³n sintÃ©tica 100",
         "district": "Pruebas",
         "city_region": "Lima",
         "country": "Peru",
@@ -284,7 +284,7 @@
         "latitude": -12.04,
         "longitude": -77.03,
         "admin_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00"
+        "created_at": "2026-10-31T19:48:56+00:00"
       }
     ],
     "corsOrigin": null
@@ -346,7 +346,7 @@
         "atmospheric_pressure": 0,
         "suspended_particles": 0,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -379,7 +379,7 @@
       "atmospheric_pressure": 1013,
       "suspended_particles": 12,
       "establishment_id": 1,
-      "created_at": "2026-10-31T19:47:37+00:00",
+      "created_at": "2026-10-31T19:48:56+00:00",
       "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
     },
     "corsOrigin": null
@@ -402,7 +402,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -426,7 +426,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -450,7 +450,7 @@
       "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
       "title": "Not Found",
       "status": 404,
-      "traceId": "00-838cf005198b4aa5adcb1850d0e2f85a-8b5cf57e39a3db80-00"
+      "traceId": "00-503f2d24b93b325a343136c3661c2a20-70fd32580f92d24a-00"
     },
     "corsOrigin": null
   },
@@ -472,7 +472,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -496,7 +496,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -522,7 +522,7 @@
       "status": 400,
       "detail": "Invalid DoorStatus value.",
       "instance": "/api/v1/establishments/1/devices/1/sensor-data",
-      "traceId": "00-e8ad8ef2a340acd54b3e8ca5937a4534-8cb3dfb38c3b0b15-00"
+      "traceId": "00-0831b2a569c918f8ff53178fb5f0abfa-b981f9ab3f34f7cf-00"
     },
     "corsOrigin": null
   },
@@ -544,7 +544,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -568,7 +568,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -605,7 +605,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
@@ -633,7 +633,7 @@
       "atmospheric_pressure": 0,
       "suspended_particles": 0,
       "establishment_id": 1,
-      "created_at": "2026-10-31T19:47:38.2007072+00:00",
+      "created_at": "2026-10-31T19:48:57.1149425+00:00",
       "enabled_sensors": "{}"
     },
     "corsOrigin": null
@@ -665,7 +665,7 @@
       "atmospheric_pressure": 1013,
       "suspended_particles": 12,
       "establishment_id": 1,
-      "created_at": "2026-10-31T19:47:38+00:00",
+      "created_at": "2026-10-31T19:48:57+00:00",
       "enabled_sensors": "{}"
     },
     "corsOrigin": null
@@ -688,7 +688,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:38+00:00",
+        "created_at": "2026-10-31T19:48:57+00:00",
         "enabled_sensors": "{}"
       }
     ],
@@ -712,7 +712,7 @@
       "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
       "title": "Not Found",
       "status": 404,
-      "traceId": "00-e62331f99c3eb30c92a773be496c6bed-44ed9d30b614d7ca-00"
+      "traceId": "00-2d8f9a07cde7ba6e15dfb98d02782e43-46257fcb261980c7-00"
     },
     "corsOrigin": null
   },
@@ -732,7 +732,7 @@
       "start_date": "2026-10-30",
       "end_date": "2026-11-30",
       "admin_id": 1,
-      "created_at": "2026-10-31T19:47:38.3788136+00:00"
+      "created_at": "2026-10-31T19:48:57.2826722+00:00"
     },
     "corsOrigin": null
   },
@@ -748,7 +748,7 @@
         "start_date": "2026-10-30",
         "end_date": "2026-11-30",
         "admin_id": 1,
-        "created_at": "2026-10-31T19:47:38+00:00"
+        "created_at": "2026-10-31T19:48:57+00:00"
       }
     ],
     "corsOrigin": null
@@ -855,7 +855,7 @@
         "atmospheric_pressure": 1013,
         "suspended_particles": 12,
         "establishment_id": 1,
-        "created_at": "2026-10-31T19:47:37+00:00",
+        "created_at": "2026-10-31T19:48:56+00:00",
         "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
       }
     ],
