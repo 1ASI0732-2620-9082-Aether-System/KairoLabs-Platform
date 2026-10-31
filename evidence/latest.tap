@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: IT-IAM-01 login valido integra API, BCrypt y MySQL sin exponer credenciales
+ok 1 - IT-IAM-01 login valido integra API, BCrypt y MySQL sin exponer credenciales
+  ---
+  duration_ms: 2030.1682
+  type: 'test'
+  ...
+# Subtest: IT-IAM-02 clave incorrecta devuelve 401 y no emite token
+ok 2 - IT-IAM-02 clave incorrecta devuelve 401 y no emite token
+  ---
+  duration_ms: 322.3787
+  type: 'test'
+  ...
+# Subtest: IT-EST-01 sedes creadas se recuperan por administrador y por SQL independiente
+ok 3 - IT-EST-01 sedes creadas se recuperan por administrador y por SQL independiente
+  ---
+  duration_ms: 115.6645
+  type: 'test'
+  ...
+# Subtest: IT-OP-01 asignacion de operador no mezcla sedes
+ok 4 - IT-OP-01 asignacion de operador no mezcla sedes
+  ---
+  duration_ms: 96.5088
+  type: 'test'
+  ...
+# Subtest: IT-DEV-01 dispositivo se recupera con su sede, ubicacion y tipo
+ok 5 - IT-DEV-01 dispositivo se recupera con su sede, ubicacion y tipo
+  ---
+  duration_ms: 27.4057
+  type: 'test'
+  ...
+# Subtest: IT-DEV-02 lectura persiste en MySQL y se recupera en otra solicitud
+ok 6 - IT-DEV-02 lectura persiste en MySQL y se recupera en otra solicitud
+  ---
+  duration_ms: 113.1949
+  type: 'test'
+  ...
+# Subtest: IT-DEV-03 actualizar desde otra sede devuelve 404 sin modificar la lectura
+ok 7 - IT-DEV-03 actualizar desde otra sede devuelve 404 sin modificar la lectura
+  ---
+  duration_ms: 12.8024
+  type: 'test'
+  ...
+# Subtest: IT-DEV-04 DoorStatus invalido devuelve 400 sin persistencia parcial
+ok 8 - IT-DEV-04 DoorStatus invalido devuelve 400 sin persistencia parcial
+  ---
+  duration_ms: 11.2474
+  type: 'test'
+  ...
+# Subtest: IT-DEV-05 tipo de medicamento invalido devuelve 400 sin crear dispositivo
+ok 9 - IT-DEV-05 tipo de medicamento invalido devuelve 400 sin crear dispositivo
+  ---
+  duration_ms: 9.6731
+  type: 'test'
+  ...
+# Subtest: IT-LOG-01 transporte guarda lectura y rechaza identificador inexistente
+ok 10 - IT-LOG-01 transporte guarda lectura y rechaza identificador inexistente
+  ---
+  duration_ms: 178.6877
+  type: 'test'
+  ...
+# Subtest: IT-SUB-01 suscripcion completa ciclo crear consultar eliminar y nueva consulta
+ok 11 - IT-SUB-01 suscripcion completa ciclo crear consultar eliminar y nueva consulta
+  ---
+  duration_ms: 179.9849
+  type: 'test'
+  ...
+# Subtest: IT-WEB-01 gateways Axios y assemblers reales consumen API y datos persistidos
+ok 12 - IT-WEB-01 gateways Axios y assemblers reales consumen API y datos persistidos
+  ---
+  duration_ms: 489.0106
+  type: 'test'
+  ...
+# Subtest: IT-WEB-02 CORS permite origen local rechaza ajeno y admite dominio KairoLabs
+ok 13 - IT-WEB-02 CORS permite origen local rechaza ajeno y admite dominio KairoLabs
+  ---
+  duration_ms: 4.1064
+  type: 'test'
+  ...
+# Subtest: IT-SEC-01 API exige autenticacion para listar datos operativos
+ok 14 - IT-SEC-01 API exige autenticacion para listar datos operativos
+  ---
+  duration_ms: 19.1089
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4107.0089

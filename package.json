@@ -1,0 +1,12 @@
+{
+  "name": "kairolabs-core-integration-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test": "node scripts/run-integration.mjs",
+    "test:report": "node scripts/run-integration.mjs tap",
+    "setup": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-tools.ps1"
+  }
+}

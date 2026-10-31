@@ -1,0 +1,11 @@
+{
+  "folders": [{ "name": "KairoLabs · Integración API y MySQL", "path": "." }],
+  "settings": {
+    "workbench.startupEditor": "readme",
+    "editor.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
+    "files.encoding": "utf8",
+    "files.exclude": { "**/bin": true, "**/obj": true, "**/node_modules": true, ".runtime": true },
+    "search.exclude": { "**/bin": true, "**/obj": true, "**/node_modules": true, ".runtime": true }
+  }
+}

@@ -1,0 +1,1347 @@
+{
+  "backend_repository": "https://github.com/1ASI0730-2610-12258-TBL-MediTrackSensor/medi-track-sensor-platform",
+  "backend_commit": "c6c0bc7cfe03014f0ec311d8fb6c6a3ae8dddb03",
+  "frontend_repository": "https://github.com/1ASI0732-2620-9082-Aether-System/KairoLabs-Frontend",
+  "frontend_base_commit": "0d2c76f8fb20405e6ea271dfe505222cc7cc1aa2",
+  "frontend_local_patch": "Device.toNum missing-value fix from 6.1.1",
+  "backend_changes": "Local CORS and JWT authentication fix in Program.cs; AllowAnonymous for sign-up/sign-in in UsersController.cs; appsettings files sanitized for local tests.",
+  "backend_files": [
+    {
+      "path": "appsettings.Development.json",
+      "base_sha256": "a8d2e3576b2ae43a0fa413021ad52baef940cefb146f4bb3864a19a238541202",
+      "delivered_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "modified": true
+    },
+    {
+      "path": "appsettings.json",
+      "base_sha256": "1e5dd7eaa2fef55005f90c888f20eed7a302e0e37f299ca66623abf757d2313a",
+      "delivered_sha256": "5a3a917d92c8e971a405c2afc0e1a69e4dd7a2389dbfd28c2fea20519557edb1",
+      "modified": true
+    },
+    {
+      "path": "Dockerfile",
+      "base_sha256": "c6587afedf61380d26e3f462004d9878997d186076a4fcd312e308e788e79038",
+      "delivered_sha256": "c6587afedf61380d26e3f462004d9878997d186076a4fcd312e308e788e79038",
+      "modified": false
+    },
+    {
+      "path": "Program.cs",
+      "base_sha256": "b9d97a88061457721f88ff7386898fa1bd747035cc9972fab3636991937b9a77",
+      "delivered_sha256": "a75edd789eb3a93d749d22c8bba21c1dad1bcbc3d2d02842114451e26caeeda4",
+      "modified": true
+    },
+    {
+      "path": "TechnoByteLambders.MediTrackSensor.Platform.csproj",
+      "base_sha256": "d17472b3c02d53caf19a57dc1413e6fab0975faa1d5cb699f65076f912ee924d",
+      "delivered_sha256": "d17472b3c02d53caf19a57dc1413e6fab0975faa1d5cb699f65076f912ee924d",
+      "modified": false
+    },
+    {
+      "path": "TechnoByteLambders.MediTrackSensor.Platform.http",
+      "base_sha256": "24e578ec3e021d8c6b3eb8b3560ccad660f8dce23946e3f2ff7de1473b5eabc0",
+      "delivered_sha256": "24e578ec3e021d8c6b3eb8b3560ccad660f8dce23946e3f2ff7de1473b5eabc0",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/CommandServices/IEstablishmentCommandService.cs",
+      "base_sha256": "c25dfec357c4291a148b65b3e3b1a027a4641238f27ccb96ceb170dabc267119",
+      "delivered_sha256": "c25dfec357c4291a148b65b3e3b1a027a4641238f27ccb96ceb170dabc267119",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/CommandServices/IOperatorCommandService.cs",
+      "base_sha256": "65388004b4d72bbe2382ab50ff33a00e36b19ef40d2943330a49abf9df770379",
+      "delivered_sha256": "65388004b4d72bbe2382ab50ff33a00e36b19ef40d2943330a49abf9df770379",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/Internal/CommandServices/EstablishmentCommandService.cs",
+      "base_sha256": "0d233662f8fc92a841e05e84ee2ec68a1a5ab8a9d9aa0698cd264e8063b352a7",
+      "delivered_sha256": "0d233662f8fc92a841e05e84ee2ec68a1a5ab8a9d9aa0698cd264e8063b352a7",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/Internal/CommandServices/OperatorCommandService.cs",
+      "base_sha256": "ae4b7a44881171ae893c49d38945ef06a4e6866be1c8d24355d6830c4e8218e3",
+      "delivered_sha256": "ae4b7a44881171ae893c49d38945ef06a4e6866be1c8d24355d6830c4e8218e3",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/Internal/QueryServices/EstablishmentQueryService.cs",
+      "base_sha256": "2868b71301a5c92a575553609790308422e5d925c31eecbf5ac3ee248e584ee8",
+      "delivered_sha256": "2868b71301a5c92a575553609790308422e5d925c31eecbf5ac3ee248e584ee8",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/Internal/QueryServices/OperatorQueryService.cs",
+      "base_sha256": "48ba9086d70328850dcea8fd3df8e745e290e93356130873795360b486fccd16",
+      "delivered_sha256": "48ba9086d70328850dcea8fd3df8e745e290e93356130873795360b486fccd16",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/QueryServices/IEstablishmentQueryService.cs",
+      "base_sha256": "f8e4bf11a9cb07d2b7ab0c7dd6d38e4c9a33cde0e09af6cafc2bb59fc332cce9",
+      "delivered_sha256": "f8e4bf11a9cb07d2b7ab0c7dd6d38e4c9a33cde0e09af6cafc2bb59fc332cce9",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Application/QueryServices/IOperatorQueryService.cs",
+      "base_sha256": "ce63a2a986fc2d5117d4be861afa30d1dbdd2152ac5b5491c602bb3d7ce9b028",
+      "delivered_sha256": "ce63a2a986fc2d5117d4be861afa30d1dbdd2152ac5b5491c602bb3d7ce9b028",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Aggregates/Establishment.cs",
+      "base_sha256": "82c4bba5160b8e7f1f102ad5138b7f081ec3b4c1b0c9d699d2d33d01537b9dce",
+      "delivered_sha256": "82c4bba5160b8e7f1f102ad5138b7f081ec3b4c1b0c9d699d2d33d01537b9dce",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Aggregates/EstablishmentAudit.cs",
+      "base_sha256": "f05eef4f13813e402ffccacf419bcb5f81c3d1df76794d28086872a9d318b2c6",
+      "delivered_sha256": "f05eef4f13813e402ffccacf419bcb5f81c3d1df76794d28086872a9d318b2c6",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Aggregates/Operator.cs",
+      "base_sha256": "2e848395f73418c674206ca2cd7035e4fe95b5f9db03bae2395030ff8fae3942",
+      "delivered_sha256": "2e848395f73418c674206ca2cd7035e4fe95b5f9db03bae2395030ff8fae3942",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Aggregates/OperatorAudit.cs",
+      "base_sha256": "d23d15b80ec7b2d84e7d858a6c93bcc37f515c6b4466d30f3e603f9ccb7efa6a",
+      "delivered_sha256": "d23d15b80ec7b2d84e7d858a6c93bcc37f515c6b4466d30f3e603f9ccb7efa6a",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Commands/CreateEstablishmentCommand.cs",
+      "base_sha256": "3acff542ecbc001fdf537d8740306070a730541b627f50f6ae118c2b61dabc8e",
+      "delivered_sha256": "3acff542ecbc001fdf537d8740306070a730541b627f50f6ae118c2b61dabc8e",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Commands/CreateOperatorCommand.cs",
+      "base_sha256": "a07aeaaff60af78859b63ca712a09def65a57c1bf00c701ba902a47437cfa661",
+      "delivered_sha256": "a07aeaaff60af78859b63ca712a09def65a57c1bf00c701ba902a47437cfa661",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Commands/DeleteOperatorCommand.cs",
+      "base_sha256": "ba834ab2a9e036d613d4af653dc6e37f3f14f3e076b4d43c90d9c4bb97a1b3e8",
+      "delivered_sha256": "ba834ab2a9e036d613d4af653dc6e37f3f14f3e076b4d43c90d9c4bb97a1b3e8",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Commands/IncrementOperatorAlertCommand.cs",
+      "base_sha256": "2d6e06303f2b2e11af5e176b0f349549e3c33ca53a8bde80a56fb0fbc4c474b0",
+      "delivered_sha256": "2d6e06303f2b2e11af5e176b0f349549e3c33ca53a8bde80a56fb0fbc4c474b0",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Commands/UpdateOperatorCommand.cs",
+      "base_sha256": "ca2ca1486c2524fe03f2462d0871e39f8e71e90bab11e96c7fa4cd4743b02138",
+      "delivered_sha256": "ca2ca1486c2524fe03f2462d0871e39f8e71e90bab11e96c7fa4cd4743b02138",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Errors/EstablishmentsError.cs",
+      "base_sha256": "6de3df8da6f90e21eff1c1d91422281f70d4f2d11c287facd7262b0ce690d61f",
+      "delivered_sha256": "6de3df8da6f90e21eff1c1d91422281f70d4f2d11c287facd7262b0ce690d61f",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Errors/EstablishmentsErrors.cs",
+      "base_sha256": "72bb9d619d77ca8d40b9b604b886c951d43aaa303fa67aeff92afb7a44355f6c",
+      "delivered_sha256": "72bb9d619d77ca8d40b9b604b886c951d43aaa303fa67aeff92afb7a44355f6c",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Queries/GetAllEstablishmentsQuery.cs",
+      "base_sha256": "ddaee7b7a10b883439845d606cf21c8d19690e5f3be7d7a7d750dd6c36db1ee0",
+      "delivered_sha256": "ddaee7b7a10b883439845d606cf21c8d19690e5f3be7d7a7d750dd6c36db1ee0",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/Queries/GetAllOperatorsQuery.cs",
+      "base_sha256": "26303c62347e7e487b1b2eb2b99ad85758d77c5bbe26d2ac151bd57a4d6b2d1e",
+      "delivered_sha256": "26303c62347e7e487b1b2eb2b99ad85758d77c5bbe26d2ac151bd57a4d6b2d1e",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/ValueObjects/Address.cs",
+      "base_sha256": "836ec704d303f21f31ec04d22f487c582963bb037f77ffc0c0577190cd329001",
+      "delivered_sha256": "836ec704d303f21f31ec04d22f487c582963bb037f77ffc0c0577190cd329001",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/ValueObjects/AdminId.cs",
+      "base_sha256": "477ba2bba853d766118eec0b137a88607622cd20ac65086a359952b1837eae12",
+      "delivered_sha256": "477ba2bba853d766118eec0b137a88607622cd20ac65086a359952b1837eae12",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/ValueObjects/EstablishmentType.cs",
+      "base_sha256": "f2737f0ecc5d349cd278595c0bb8480b738449249400340d26f220f7bf0bffbb",
+      "delivered_sha256": "f2737f0ecc5d349cd278595c0bb8480b738449249400340d26f220f7bf0bffbb",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/ValueObjects/Location.cs",
+      "base_sha256": "79be959a5440139a428ee7edf564597ce12d3c321b2f6103ce2edf3f27a4527b",
+      "delivered_sha256": "79be959a5440139a428ee7edf564597ce12d3c321b2f6103ce2edf3f27a4527b",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Model/ValueObjects/UserId.cs",
+      "base_sha256": "de1f616f32667099e066dd4551ca73c7dcea2e53ac3640113622b7abd881fb07",
+      "delivered_sha256": "de1f616f32667099e066dd4551ca73c7dcea2e53ac3640113622b7abd881fb07",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Repositories/IEstablishmentRepository.cs",
+      "base_sha256": "31b33029e0401ca49cefe50ce829622d8d47dc2055978ef7dae3ef512e8abc52",
+      "delivered_sha256": "31b33029e0401ca49cefe50ce829622d8d47dc2055978ef7dae3ef512e8abc52",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Domain/Repositories/IOperatorRepository.cs",
+      "base_sha256": "833dc0a2020c0177d1ced15a6980ee60ba8965cd515b24e5a1ed54602f00430e",
+      "delivered_sha256": "833dc0a2020c0177d1ced15a6980ee60ba8965cd515b24e5a1ed54602f00430e",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Infrastructure/Persistence/EFC/Configuration/EstablishmentsContextConfiguration.cs",
+      "base_sha256": "8dabbd2def6e0a1d463ed5fb76b399dc21bb147dda5cdbb681f1c77216eaf3e1",
+      "delivered_sha256": "8dabbd2def6e0a1d463ed5fb76b399dc21bb147dda5cdbb681f1c77216eaf3e1",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Infrastructure/Persistence/EFC/Configuration/OperatorsContextConfiguration.cs",
+      "base_sha256": "45d44fd883d29ad1c231b3f4390c88cbd76c76b565d9f3040cde9fc54c3f8bf7",
+      "delivered_sha256": "45d44fd883d29ad1c231b3f4390c88cbd76c76b565d9f3040cde9fc54c3f8bf7",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Infrastructure/Persistence/EFC/Repositories/EstablishmentRepository.cs",
+      "base_sha256": "7c33a5089950a93af642981c547faf49cf3518cbb0430478dd06436b9013b0a8",
+      "delivered_sha256": "7c33a5089950a93af642981c547faf49cf3518cbb0430478dd06436b9013b0a8",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Infrastructure/Persistence/EFC/Repositories/OperatorRepository.cs",
+      "base_sha256": "908e990d33c3b89851ebc4bbb8ccae6fc3727a5e831859fb71d2a3b373081f77",
+      "delivered_sha256": "908e990d33c3b89851ebc4bbb8ccae6fc3727a5e831859fb71d2a3b373081f77",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/AdminEstablishmentsController.cs",
+      "base_sha256": "1125bc6078414ea6dc32b0edeb5985ae9fda011504d8259e3aa67d763fc4a40f",
+      "delivered_sha256": "1125bc6078414ea6dc32b0edeb5985ae9fda011504d8259e3aa67d763fc4a40f",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/EstablishmentOperatorsController.cs",
+      "base_sha256": "684d679a2f4df2f326d53be424043c950d9ab36b6d6cb903c688d93dfa3d60c6",
+      "delivered_sha256": "684d679a2f4df2f326d53be424043c950d9ab36b6d6cb903c688d93dfa3d60c6",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/EstablishmentsController.cs",
+      "base_sha256": "816e69f3a55c624fe9e2b2f905103f82a209bf5b1f86ac03bb3d89eb840c2e3d",
+      "delivered_sha256": "816e69f3a55c624fe9e2b2f905103f82a209bf5b1f86ac03bb3d89eb840c2e3d",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/OperatorsController.cs",
+      "base_sha256": "b9ffecf2644858d2600f9ecd1a9e3229670ec8ba61eeccd29ae670a250f68dfc",
+      "delivered_sha256": "b9ffecf2644858d2600f9ecd1a9e3229670ec8ba61eeccd29ae670a250f68dfc",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/CreateEstablishmentResource.cs",
+      "base_sha256": "937f5baf64de475c07309f849ff05c3b46f66718ada2e5a5c4efa9320df7a05c",
+      "delivered_sha256": "937f5baf64de475c07309f849ff05c3b46f66718ada2e5a5c4efa9320df7a05c",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/CreateNestedEstablishmentResource.cs",
+      "base_sha256": "bfec76d7994de431b16ad7c467a3bb9b64282f8da0efa8bd8342e95dbcfd357f",
+      "delivered_sha256": "bfec76d7994de431b16ad7c467a3bb9b64282f8da0efa8bd8342e95dbcfd357f",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/CreateNestedOperatorResource.cs",
+      "base_sha256": "af396d99f0920cb6de2dc3b98fc6cf9e5a955f468df194fbe63680cb0cdc7d47",
+      "delivered_sha256": "af396d99f0920cb6de2dc3b98fc6cf9e5a955f468df194fbe63680cb0cdc7d47",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/CreateOperatorResource.cs",
+      "base_sha256": "0818b2314d66b27417c841d45b51da4e59153b2fb645bc353503902744f34ca4",
+      "delivered_sha256": "0818b2314d66b27417c841d45b51da4e59153b2fb645bc353503902744f34ca4",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/EstablishmentResource.cs",
+      "base_sha256": "56edc30145b09679461057bfa8fcee461696a03707eb29618f52e51ea53c9e48",
+      "delivered_sha256": "56edc30145b09679461057bfa8fcee461696a03707eb29618f52e51ea53c9e48",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/OperatorResource.cs",
+      "base_sha256": "5d94362c6591fd9302112393b0ac3724df0f8d95f34c97055a3c0620e2f80330",
+      "delivered_sha256": "5d94362c6591fd9302112393b0ac3724df0f8d95f34c97055a3c0620e2f80330",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/UpdateNestedOperatorResource.cs",
+      "base_sha256": "9de60f62acc6215837684ac212752798bc753f37ac0b851439d27b59845e00d9",
+      "delivered_sha256": "9de60f62acc6215837684ac212752798bc753f37ac0b851439d27b59845e00d9",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Resources/UpdateOperatorResource.cs",
+      "base_sha256": "f79eb336a8624583577421d440c7d45ffd56e115d44eede14f677e8a09f86189",
+      "delivered_sha256": "f79eb336a8624583577421d440c7d45ffd56e115d44eede14f677e8a09f86189",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Transform/EstablishmentResourceFromEntityAssembler.cs",
+      "base_sha256": "690091848b8ceaeada3992a17c30afb7320b40fb6f8157f1f34fc30888604fd4",
+      "delivered_sha256": "690091848b8ceaeada3992a17c30afb7320b40fb6f8157f1f34fc30888604fd4",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Interfaces/REST/Transform/OperatorResourceFromEntityAssembler.cs",
+      "base_sha256": "3eb64588163ff3eac4f4afff0d940aee8771cb35f0d65c08251005df765492aa",
+      "delivered_sha256": "3eb64588163ff3eac4f4afff0d940aee8771cb35f0d65c08251005df765492aa",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Resources/EstablishmentsMessages.cs",
+      "base_sha256": "1218eb6945b6bf7926028ceac84830951d6cdc85586e58d9c2a2e2e64ff1bbc1",
+      "delivered_sha256": "1218eb6945b6bf7926028ceac84830951d6cdc85586e58d9c2a2e2e64ff1bbc1",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Resources/EstablishmentsMessages.es.resx",
+      "base_sha256": "65ba5bc1bc37bf7ac727b4c560ad50d66df473cd52a78c84e1bed3ef6b5663eb",
+      "delivered_sha256": "65ba5bc1bc37bf7ac727b4c560ad50d66df473cd52a78c84e1bed3ef6b5663eb",
+      "modified": false
+    },
+    {
+      "path": "Establishments/Resources/EstablishmentsMessages.resx",
+      "base_sha256": "94cf3187e6d518cbbf0ff63d326800911a2094666fbd3d5133f852a6b99e9cb8",
+      "delivered_sha256": "94cf3187e6d518cbbf0ff63d326800911a2094666fbd3d5133f852a6b99e9cb8",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/CommandServices/IAdminCommandService.cs",
+      "base_sha256": "2bf591a6b0b29bf312c1cc154f40084b0c8a1281cde4cdb18438bfb6d5d6df3d",
+      "delivered_sha256": "2bf591a6b0b29bf312c1cc154f40084b0c8a1281cde4cdb18438bfb6d5d6df3d",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/CommandServices/IUserCommandService.cs",
+      "base_sha256": "7cea6ff4c3b632e3d8bc29514e6ded258a0c0e0ff84b459396a9723901742185",
+      "delivered_sha256": "7cea6ff4c3b632e3d8bc29514e6ded258a0c0e0ff84b459396a9723901742185",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/Internal/CommandServices/AdminCommandService.cs",
+      "base_sha256": "06847dc30fa63345fddaa9522afe45ba77d05e4f0a21df9bd0d2045cfa362333",
+      "delivered_sha256": "06847dc30fa63345fddaa9522afe45ba77d05e4f0a21df9bd0d2045cfa362333",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/Internal/CommandServices/UserCommandService.cs",
+      "base_sha256": "b230fb6d55ff8ca0fdcf4789c7f438c17da7de9cce829362bc9119d10d6f4a73",
+      "delivered_sha256": "b230fb6d55ff8ca0fdcf4789c7f438c17da7de9cce829362bc9119d10d6f4a73",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/Internal/OutboundServices/IHashingService.cs",
+      "base_sha256": "a14cbdc8b59611d86f48d55d96ed86ecb7cf7feb9a0c9244c620784b1152e9b8",
+      "delivered_sha256": "a14cbdc8b59611d86f48d55d96ed86ecb7cf7feb9a0c9244c620784b1152e9b8",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/Internal/OutboundServices/ITokenService.cs",
+      "base_sha256": "743558dd2ece7943b7234234aef6c3277b10ca4c91da381f1d785ac9e27e85e8",
+      "delivered_sha256": "743558dd2ece7943b7234234aef6c3277b10ca4c91da381f1d785ac9e27e85e8",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/Internal/QueryServices/AdminQueryService.cs",
+      "base_sha256": "4c9733e261e18d10569ea17f9683bf701b1f66fe1cc938c0b9cd97ca86639b66",
+      "delivered_sha256": "4c9733e261e18d10569ea17f9683bf701b1f66fe1cc938c0b9cd97ca86639b66",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/Internal/QueryServices/UserQueryService.cs",
+      "base_sha256": "f7e3d8e3e8a5b436fe47cf1cd05fc7a9385cdd0fca3c9fd4378c833a3f083a7f",
+      "delivered_sha256": "f7e3d8e3e8a5b436fe47cf1cd05fc7a9385cdd0fca3c9fd4378c833a3f083a7f",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/QueryServices/IAdminQueryService.cs",
+      "base_sha256": "54b4aee6e141593d0121ecc43ac6f8db403822f2a8e62bd98db8c974c83600e4",
+      "delivered_sha256": "54b4aee6e141593d0121ecc43ac6f8db403822f2a8e62bd98db8c974c83600e4",
+      "modified": false
+    },
+    {
+      "path": "Iam/Application/QueryServices/IUserQueryService.cs",
+      "base_sha256": "882948a09251fd6a162796c9cbff728adfa86ac23cd58b2707b68b5157545d28",
+      "delivered_sha256": "882948a09251fd6a162796c9cbff728adfa86ac23cd58b2707b68b5157545d28",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Aggregates/Admin.cs",
+      "base_sha256": "42c1b831ae6392007ad52a185c67126da193603f2424b3d9c1dea52b6161e5e1",
+      "delivered_sha256": "42c1b831ae6392007ad52a185c67126da193603f2424b3d9c1dea52b6161e5e1",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Aggregates/AdminAudit.cs",
+      "base_sha256": "264b72d9c35e88982330232b3bb5816ac2ddda3fe715931069f97ab422eb9fb9",
+      "delivered_sha256": "264b72d9c35e88982330232b3bb5816ac2ddda3fe715931069f97ab422eb9fb9",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Aggregates/User.cs",
+      "base_sha256": "d8e74695e9eeeb7c11152ca428eb45fba57fc7fd83c9a41986d0ba6a86443d34",
+      "delivered_sha256": "d8e74695e9eeeb7c11152ca428eb45fba57fc7fd83c9a41986d0ba6a86443d34",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Aggregates/UserAudit.cs",
+      "base_sha256": "0f44cbfb0d14b762e9c273055b10e898e6af1b31413d41ab18d87fcc1fb29b17",
+      "delivered_sha256": "0f44cbfb0d14b762e9c273055b10e898e6af1b31413d41ab18d87fcc1fb29b17",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Commands/CreateAdminCommand.cs",
+      "base_sha256": "d4b56fee6154a573091119806391460021dbc7d106e137548a0d18c4d82e1a4a",
+      "delivered_sha256": "d4b56fee6154a573091119806391460021dbc7d106e137548a0d18c4d82e1a4a",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Commands/SignInCommand.cs",
+      "base_sha256": "ace13131c7a937025ae88ee11f7f8cd0793d2f279c7ffe0afcc3747b57660153",
+      "delivered_sha256": "ace13131c7a937025ae88ee11f7f8cd0793d2f279c7ffe0afcc3747b57660153",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Commands/SignUpCommand.cs",
+      "base_sha256": "95a2c73cce63108992bf83878fb70f6e008da65f687546aec4851ff818410d90",
+      "delivered_sha256": "95a2c73cce63108992bf83878fb70f6e008da65f687546aec4851ff818410d90",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Errors/IamError.cs",
+      "base_sha256": "1ff771f7b61ff09984dacae4d760aff8112278071f9889c43692976ee425d7db",
+      "delivered_sha256": "1ff771f7b61ff09984dacae4d760aff8112278071f9889c43692976ee425d7db",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Errors/IamErrors.cs",
+      "base_sha256": "582fafd10c2ff83b8b814b432b0921997a6560a73b206dc1bf4fa25c65442350",
+      "delivered_sha256": "582fafd10c2ff83b8b814b432b0921997a6560a73b206dc1bf4fa25c65442350",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Queries/GetAdminByUserIdQuery.cs",
+      "base_sha256": "cdd7b0e747a52c9ef5db2635a3be8ecf8bd1ed85940057df4ca498d585461652",
+      "delivered_sha256": "cdd7b0e747a52c9ef5db2635a3be8ecf8bd1ed85940057df4ca498d585461652",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Queries/GetAllAdminsQuery.cs",
+      "base_sha256": "9a035849034b4af6afdb009717216f719ad407a8e7a31c63b6cc44b61787a193",
+      "delivered_sha256": "9a035849034b4af6afdb009717216f719ad407a8e7a31c63b6cc44b61787a193",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Queries/GetAllUsersQuery.cs",
+      "base_sha256": "557a605c28b6a01e52431d03b1296239c6473c02b4a0d1c50d4c84fd13fe7043",
+      "delivered_sha256": "557a605c28b6a01e52431d03b1296239c6473c02b4a0d1c50d4c84fd13fe7043",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/Queries/GetUserByEmailQuery.cs",
+      "base_sha256": "0d28401959f0669f67a60d15cc0071bd657f8c9ccf04cf239e4ce0cf6c8c0305",
+      "delivered_sha256": "0d28401959f0669f67a60d15cc0071bd657f8c9ccf04cf239e4ce0cf6c8c0305",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/ValueObjects/Dni.cs",
+      "base_sha256": "fdfe9e1f122dc366860ef5afb88196bed84025efc6d2208043e9f0dcd56bf6b9",
+      "delivered_sha256": "fdfe9e1f122dc366860ef5afb88196bed84025efc6d2208043e9f0dcd56bf6b9",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/ValueObjects/Email.cs",
+      "base_sha256": "0e197486a9dda34a430e7153dcbb7af171e78875468e7497fbc0fa7655841c02",
+      "delivered_sha256": "0e197486a9dda34a430e7153dcbb7af171e78875468e7497fbc0fa7655841c02",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/ValueObjects/UserId.cs",
+      "base_sha256": "7be19937487b0ed262024114898f4dd10f9d43084d9d942888a5e44b90db33a8",
+      "delivered_sha256": "7be19937487b0ed262024114898f4dd10f9d43084d9d942888a5e44b90db33a8",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Model/ValueObjects/UserRole.cs",
+      "base_sha256": "ce6caefedb478a0248602bbc80610f9185b2d8ae0ade2d92ebf727d941842d44",
+      "delivered_sha256": "ce6caefedb478a0248602bbc80610f9185b2d8ae0ade2d92ebf727d941842d44",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Repositories/IAdminRepository.cs",
+      "base_sha256": "15a64cc2f8352d886970d256468a6b8ae182cd60e8b01bbf1a54f55cf54c74f1",
+      "delivered_sha256": "15a64cc2f8352d886970d256468a6b8ae182cd60e8b01bbf1a54f55cf54c74f1",
+      "modified": false
+    },
+    {
+      "path": "Iam/Domain/Repositories/IUserRepository.cs",
+      "base_sha256": "ea254ffac2efa79ac8feb37c735aa86c52d354a60d896ba15dc3a1b4215695c4",
+      "delivered_sha256": "ea254ffac2efa79ac8feb37c735aa86c52d354a60d896ba15dc3a1b4215695c4",
+      "modified": false
+    },
+    {
+      "path": "Iam/Infrastructure/OutboundServices/HashingService.cs",
+      "base_sha256": "8e186d8cdeed90af585ad43dfdde7e09ac54c80c5f76e35bf00bcbbd3e785281",
+      "delivered_sha256": "8e186d8cdeed90af585ad43dfdde7e09ac54c80c5f76e35bf00bcbbd3e785281",
+      "modified": false
+    },
+    {
+      "path": "Iam/Infrastructure/OutboundServices/TokenService.cs",
+      "base_sha256": "70dd9afbb89292af6c5235d226462516eb969569fb5605817bc0ebdc42e313f8",
+      "delivered_sha256": "70dd9afbb89292af6c5235d226462516eb969569fb5605817bc0ebdc42e313f8",
+      "modified": false
+    },
+    {
+      "path": "Iam/Infrastructure/Persistence/EFC/Configuration/IamContextConfiguration.cs",
+      "base_sha256": "730b139adf7e992448a1d6e5bb0b4223bc63bb0fb1368eb94adf3faf97acef4f",
+      "delivered_sha256": "730b139adf7e992448a1d6e5bb0b4223bc63bb0fb1368eb94adf3faf97acef4f",
+      "modified": false
+    },
+    {
+      "path": "Iam/Infrastructure/Persistence/EFC/Repositories/AdminRepository.cs",
+      "base_sha256": "edc86dde7b8be3d8f11591c1f26885f25bad4d06300cde73683c40ccbd437914",
+      "delivered_sha256": "edc86dde7b8be3d8f11591c1f26885f25bad4d06300cde73683c40ccbd437914",
+      "modified": false
+    },
+    {
+      "path": "Iam/Infrastructure/Persistence/EFC/Repositories/UserRepository.cs",
+      "base_sha256": "cd53587c37a58a11fc2c71e1206a2504e4dc5e648252c53a60a81f59054fe3e8",
+      "delivered_sha256": "cd53587c37a58a11fc2c71e1206a2504e4dc5e648252c53a60a81f59054fe3e8",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/AdminsController.cs",
+      "base_sha256": "aad28da767bf9f310661e7c5503964468536c1f477446eb457e71a834a94b5f7",
+      "delivered_sha256": "aad28da767bf9f310661e7c5503964468536c1f477446eb457e71a834a94b5f7",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/UsersController.cs",
+      "base_sha256": "305b63c5534ee7dcfaff6e3cfc80b05c16c4731d5e715371682e38eba90d11ba",
+      "delivered_sha256": "50a3a967bda59841cf346ec6bfe61849c13cf03e040a8cfe75d9989df6f4fadf",
+      "modified": true
+    },
+    {
+      "path": "Iam/Interfaces/REST/Resources/AdminResource.cs",
+      "base_sha256": "6d20586d5ab760f53a290c5fb8c881b3dee3ae021685996772469a089bc39b6b",
+      "delivered_sha256": "6d20586d5ab760f53a290c5fb8c881b3dee3ae021685996772469a089bc39b6b",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Resources/AuthResource.cs",
+      "base_sha256": "14cb32a2424ba0130b98b12b6dc14593f7f4235cc5f70eef4396a8127e2c179d",
+      "delivered_sha256": "14cb32a2424ba0130b98b12b6dc14593f7f4235cc5f70eef4396a8127e2c179d",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Resources/CreateAdminResource.cs",
+      "base_sha256": "ce345ff2d06df4ecf3e094882e1a74fe1d59c35729dee0418c7f954f53ddf111",
+      "delivered_sha256": "ce345ff2d06df4ecf3e094882e1a74fe1d59c35729dee0418c7f954f53ddf111",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Resources/SignInResource.cs",
+      "base_sha256": "c2f88cb7ade2182afd83af34976a873607e148062dfddd3052c95224b9cc3740",
+      "delivered_sha256": "c2f88cb7ade2182afd83af34976a873607e148062dfddd3052c95224b9cc3740",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Resources/SignUpResource.cs",
+      "base_sha256": "cb6fb346e66abd50f78a2e819126624753f983be8c8aa72dce8ce0b94266bb0a",
+      "delivered_sha256": "cb6fb346e66abd50f78a2e819126624753f983be8c8aa72dce8ce0b94266bb0a",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Resources/UserResource.cs",
+      "base_sha256": "e8b9318ca89a80d61e5a6a1d9865a070cebd3499f7b40c89eb494e3bca50c7bf",
+      "delivered_sha256": "e8b9318ca89a80d61e5a6a1d9865a070cebd3499f7b40c89eb494e3bca50c7bf",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Transform/AdminResourceFromEntityAssembler.cs",
+      "base_sha256": "28ca8fb104593a776b3f23008f31accc755101a248d0c0ab2ee2fe34e67d7f71",
+      "delivered_sha256": "28ca8fb104593a776b3f23008f31accc755101a248d0c0ab2ee2fe34e67d7f71",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Transform/SignUpCommandFromResourceAssembler.cs",
+      "base_sha256": "e919974c31f76600c6d4051b41ced5e91bbcdc0c42501223e99de1b55cc5fdf0",
+      "delivered_sha256": "e919974c31f76600c6d4051b41ced5e91bbcdc0c42501223e99de1b55cc5fdf0",
+      "modified": false
+    },
+    {
+      "path": "Iam/Interfaces/REST/Transform/UserResourceFromEntityAssembler.cs",
+      "base_sha256": "0c36062169da8e801d55e95500f4c5783df33f8e3c2364fba99e0d793ca33be0",
+      "delivered_sha256": "0c36062169da8e801d55e95500f4c5783df33f8e3c2364fba99e0d793ca33be0",
+      "modified": false
+    },
+    {
+      "path": "Iam/Resources/IamMessages.cs",
+      "base_sha256": "aa14d3d95a5ed58d8ad2d01eac1b6222f915a7f2d70f8e3ce9283e93e90e22b7",
+      "delivered_sha256": "aa14d3d95a5ed58d8ad2d01eac1b6222f915a7f2d70f8e3ce9283e93e90e22b7",
+      "modified": false
+    },
+    {
+      "path": "Iam/Resources/IamMessages.es.resx",
+      "base_sha256": "272f77aaf4597b042102d4e80ca334c57b9197b24b772cec553c0cd62964fc40",
+      "delivered_sha256": "272f77aaf4597b042102d4e80ca334c57b9197b24b772cec553c0cd62964fc40",
+      "modified": false
+    },
+    {
+      "path": "Iam/Resources/IamMessages.resx",
+      "base_sha256": "243ba755f3470cb1b6c9a251d79a33636ddb461f38e5650cb492e217a257e5b1",
+      "delivered_sha256": "243ba755f3470cb1b6c9a251d79a33636ddb461f38e5650cb492e217a257e5b1",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Application/CommandServices/ITransportCommandService.cs",
+      "base_sha256": "99569c8cf396d0352f583776f691870a8c958ed6018f1554e0be5b79670941d1",
+      "delivered_sha256": "99569c8cf396d0352f583776f691870a8c958ed6018f1554e0be5b79670941d1",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Application/Internal/CommandServices/TransportCommandService.cs",
+      "base_sha256": "1f1eb38e2b2396a04138b705f631679a8c10fe7faebe8a2b34bc8e7294226533",
+      "delivered_sha256": "1f1eb38e2b2396a04138b705f631679a8c10fe7faebe8a2b34bc8e7294226533",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Application/Internal/QueryServices/TransportQueryService.cs",
+      "base_sha256": "4ac0fd48b7ae4f2fc723f8262afc8d26490762f89cdf71081d5d05854302582d",
+      "delivered_sha256": "4ac0fd48b7ae4f2fc723f8262afc8d26490762f89cdf71081d5d05854302582d",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Application/QueryServices/ITransportQueryService.cs",
+      "base_sha256": "db7f3f49874fc1e5eb6d8fe74d0209d801809c25024fb737082405303b580ff3",
+      "delivered_sha256": "db7f3f49874fc1e5eb6d8fe74d0209d801809c25024fb737082405303b580ff3",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Aggregates/Transport.cs",
+      "base_sha256": "3b85d51a68f6d151b0141385faee8ad854f288bccf7d7181c85b0a46c89b4d35",
+      "delivered_sha256": "3b85d51a68f6d151b0141385faee8ad854f288bccf7d7181c85b0a46c89b4d35",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Aggregates/TransportAudit.cs",
+      "base_sha256": "837b60765e89e9a235a58987aa917b4c6d0aa1c13b8e1f61c8142ea6a5c5a274",
+      "delivered_sha256": "837b60765e89e9a235a58987aa917b4c6d0aa1c13b8e1f61c8142ea6a5c5a274",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Commands/CreateTransportCommand.cs",
+      "base_sha256": "7d8e6a566ae20737788fdf39145440b71612cc0286709707089830a87b47f5f4",
+      "delivered_sha256": "7d8e6a566ae20737788fdf39145440b71612cc0286709707089830a87b47f5f4",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Commands/UpdateTransportSensorDataCommand.cs",
+      "base_sha256": "cc598b7e2ce0de462e24bf8ebdd1b336c7d70444766cc0689eca53305f886cc8",
+      "delivered_sha256": "cc598b7e2ce0de462e24bf8ebdd1b336c7d70444766cc0689eca53305f886cc8",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Errors/LogisticsError.cs",
+      "base_sha256": "05861db1256030f14d2ebaab3902c32548e0f457c9fcc6ef6631838b070f2a09",
+      "delivered_sha256": "05861db1256030f14d2ebaab3902c32548e0f457c9fcc6ef6631838b070f2a09",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Errors/LogisticsErrors.cs",
+      "base_sha256": "9dc748cc7d3b0b61b326fd3f90d1e4873c386daf57e6950d59de5f66db59f26b",
+      "delivered_sha256": "9dc748cc7d3b0b61b326fd3f90d1e4873c386daf57e6950d59de5f66db59f26b",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/Queries/GetAllTransportsQuery.cs",
+      "base_sha256": "56e0fe611cb5a79487c89aeb2341443341a1e7b09d2140007dbef464f48c84ae",
+      "delivered_sha256": "56e0fe611cb5a79487c89aeb2341443341a1e7b09d2140007dbef464f48c84ae",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/ValueObjects/DoorStatus.cs",
+      "base_sha256": "cc3c53f0d30e654ddaae2d9e0261233dad858dedea2d2c3e88efa5a66de23d8c",
+      "delivered_sha256": "cc3c53f0d30e654ddaae2d9e0261233dad858dedea2d2c3e88efa5a66de23d8c",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/ValueObjects/EstablishmentId.cs",
+      "base_sha256": "6a1c91a00b4b1a0f45f3f1470cb12eb8401da5db1927c228da36a057cd7d5633",
+      "delivered_sha256": "6a1c91a00b4b1a0f45f3f1470cb12eb8401da5db1927c228da36a057cd7d5633",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/ValueObjects/SensorReading.cs",
+      "base_sha256": "40052ecb3362eae44bbaa1e1593a61f60b7c86ff5c4de6c959f3dab613a2b05e",
+      "delivered_sha256": "40052ecb3362eae44bbaa1e1593a61f60b7c86ff5c4de6c959f3dab613a2b05e",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Model/ValueObjects/TypeOfMedication.cs",
+      "base_sha256": "ebc035fd21c7ca8174827eede46024a64b0df7ae41ba95f3371f104be53e2ccc",
+      "delivered_sha256": "ebc035fd21c7ca8174827eede46024a64b0df7ae41ba95f3371f104be53e2ccc",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Domain/Repositories/ITransportRepository.cs",
+      "base_sha256": "c271cf4f8add5825fa61c34b15643e30158578540bb4e62d39657d8a950164f0",
+      "delivered_sha256": "c271cf4f8add5825fa61c34b15643e30158578540bb4e62d39657d8a950164f0",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Infrastructure/Persistence/EFC/Configuration/LogisticsContextConfiguration.cs",
+      "base_sha256": "25d1b0b724b30ec3693595d301e53a0fa331e7da27212590c3a972d02c39cb55",
+      "delivered_sha256": "25d1b0b724b30ec3693595d301e53a0fa331e7da27212590c3a972d02c39cb55",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Infrastructure/Persistence/EFC/Repositories/TransportRepository.cs",
+      "base_sha256": "fd332f61f59be247edc797390208a966acda30b7b850499f84b3d4b77e5ea250",
+      "delivered_sha256": "fd332f61f59be247edc797390208a966acda30b7b850499f84b3d4b77e5ea250",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/EstablishmentTransportsController.cs",
+      "base_sha256": "de5df2e95753e04a2da8819c45d7c5f20135c898d62c40673b79c12e875fc002",
+      "delivered_sha256": "de5df2e95753e04a2da8819c45d7c5f20135c898d62c40673b79c12e875fc002",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/TransportsController.cs",
+      "base_sha256": "50f3b8628e52173d5b75a031c568119ebaf254f63c3185fa05cb6110009ca9f2",
+      "delivered_sha256": "50f3b8628e52173d5b75a031c568119ebaf254f63c3185fa05cb6110009ca9f2",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/Resources/CreateNestedTransportResource.cs",
+      "base_sha256": "b4aace9ee6b7daacae596b3538dd79d2eeaee9d3772d3db576b3747b6e967545",
+      "delivered_sha256": "b4aace9ee6b7daacae596b3538dd79d2eeaee9d3772d3db576b3747b6e967545",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/Resources/CreateTransportResource.cs",
+      "base_sha256": "61bcb26fcd4bd087d4bf93d8705cb365f225f0a44406ac92f4e5af2990d9113e",
+      "delivered_sha256": "61bcb26fcd4bd087d4bf93d8705cb365f225f0a44406ac92f4e5af2990d9113e",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/Resources/TransportResource.cs",
+      "base_sha256": "1abb40afced3602cc4fb3ff99635956d047e0cb8413ede4214421f147c27d98b",
+      "delivered_sha256": "1abb40afced3602cc4fb3ff99635956d047e0cb8413ede4214421f147c27d98b",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/Resources/UpdateTransportSensorDataResource.cs",
+      "base_sha256": "795f02fe31e37e4aa0ac2a4df7cb5ceaa5bd3097c6a0c45657f71af74316096d",
+      "delivered_sha256": "795f02fe31e37e4aa0ac2a4df7cb5ceaa5bd3097c6a0c45657f71af74316096d",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Interfaces/REST/Transform/TransportResourceFromEntityAssembler.cs",
+      "base_sha256": "b5113a99d678bcbb054dc0023d816e236dbb5e79aef0d9557fe5fa042c8e7023",
+      "delivered_sha256": "b5113a99d678bcbb054dc0023d816e236dbb5e79aef0d9557fe5fa042c8e7023",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Resources/LogisticsMessages.cs",
+      "base_sha256": "d1e4b09aed39a7ffbce4321524527bbb2572c100b96df55574161c79ecfc3002",
+      "delivered_sha256": "d1e4b09aed39a7ffbce4321524527bbb2572c100b96df55574161c79ecfc3002",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Resources/LogisticsMessages.es.resx",
+      "base_sha256": "46f687428dba460283767dfa7ad42f32f6f1e2c987ff95f5a601ef96ff8f8c30",
+      "delivered_sha256": "46f687428dba460283767dfa7ad42f32f6f1e2c987ff95f5a601ef96ff8f8c30",
+      "modified": false
+    },
+    {
+      "path": "Logistics/Resources/LogisticsMessages.resx",
+      "base_sha256": "9254c46c15f85a656aa4e3c13c90b39fa2bb59f9d4d0f4c814f9396a551ad5dc",
+      "delivered_sha256": "9254c46c15f85a656aa4e3c13c90b39fa2bb59f9d4d0f4c814f9396a551ad5dc",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Application/CommandServices/IDeviceCommandService.cs",
+      "base_sha256": "65e30d50e5d9267e3536e391abe9b21b25c12cf63a865fe7a29d45956c4c1cad",
+      "delivered_sha256": "65e30d50e5d9267e3536e391abe9b21b25c12cf63a865fe7a29d45956c4c1cad",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Application/Internal/CommandServices/DeviceCommandService.cs",
+      "base_sha256": "2cf5b7f086f5d7b3593ded3fa736d86ca16e9c39ba4c0b181d88b637ae78630a",
+      "delivered_sha256": "2cf5b7f086f5d7b3593ded3fa736d86ca16e9c39ba4c0b181d88b637ae78630a",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Application/Internal/QueryServices/DeviceQueryService.cs",
+      "base_sha256": "250f6ce9e1ef666ce2b8d85c22b00a16186f716adecd7621100de84b0ec0a618",
+      "delivered_sha256": "250f6ce9e1ef666ce2b8d85c22b00a16186f716adecd7621100de84b0ec0a618",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Application/QueryServices/IDeviceQueryService.cs",
+      "base_sha256": "f9c18fa8af33d3b085e3245290549e93c90d2ab0fd1cda64eb558aaa6236ee25",
+      "delivered_sha256": "f9c18fa8af33d3b085e3245290549e93c90d2ab0fd1cda64eb558aaa6236ee25",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Aggregates/Device.cs",
+      "base_sha256": "cf53763c096d306bed13d9d97ecd609e3640b0e39d28a324a2b4cc1bbd10a72e",
+      "delivered_sha256": "cf53763c096d306bed13d9d97ecd609e3640b0e39d28a324a2b4cc1bbd10a72e",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Aggregates/DeviceAudit.cs",
+      "base_sha256": "3c0c1478c5fcd65b527d2d61f484ec2fc61369152a6c54b9a04ef0a654399ef3",
+      "delivered_sha256": "3c0c1478c5fcd65b527d2d61f484ec2fc61369152a6c54b9a04ef0a654399ef3",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Commands/CreateDeviceCommand.cs",
+      "base_sha256": "9fcdd759e43a445d91d8555a13ad2a5b0496c347c4b26bf02609621d271033f0",
+      "delivered_sha256": "9fcdd759e43a445d91d8555a13ad2a5b0496c347c4b26bf02609621d271033f0",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Commands/UpdateDeviceSensorDataCommand.cs",
+      "base_sha256": "c74557ce540d443d8a0a681f219ed0407a93bb8efeb9e915374ce09b58524810",
+      "delivered_sha256": "c74557ce540d443d8a0a681f219ed0407a93bb8efeb9e915374ce09b58524810",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Errors/MonitoringError.cs",
+      "base_sha256": "d078fa403168eb1d87a784183c9808627f058e45bcd59e28e014c4f47f5b6e2f",
+      "delivered_sha256": "d078fa403168eb1d87a784183c9808627f058e45bcd59e28e014c4f47f5b6e2f",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Errors/MonitoringErrors.cs",
+      "base_sha256": "14e1ee984c6bce528e3bd1ece442d6af8b1dac80a2d5c1b90bde5097773351ea",
+      "delivered_sha256": "14e1ee984c6bce528e3bd1ece442d6af8b1dac80a2d5c1b90bde5097773351ea",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/Queries/GetAllDevicesQuery.cs",
+      "base_sha256": "66c4e7c9927d964fc0858f02baa34a8963a917629c8605e90c85344ad9f2bfa6",
+      "delivered_sha256": "66c4e7c9927d964fc0858f02baa34a8963a917629c8605e90c85344ad9f2bfa6",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/ValueObjects/DoorStatus.cs",
+      "base_sha256": "157ceeb548de5be5f5200dc26f27f0d0e774848ab8eddc5bbc97223865a4a5fa",
+      "delivered_sha256": "157ceeb548de5be5f5200dc26f27f0d0e774848ab8eddc5bbc97223865a4a5fa",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/ValueObjects/EstablishmentId.cs",
+      "base_sha256": "8ee3ca33f7af05b2d834163151a2fcfc3a3c6f801ba1502a2bbc3e248fa5679c",
+      "delivered_sha256": "8ee3ca33f7af05b2d834163151a2fcfc3a3c6f801ba1502a2bbc3e248fa5679c",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/ValueObjects/SensorReading.cs",
+      "base_sha256": "e4bc000a8c0197e45a2412fd7cf501edbc593dc42b46e632167698ac72d48d4d",
+      "delivered_sha256": "e4bc000a8c0197e45a2412fd7cf501edbc593dc42b46e632167698ac72d48d4d",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Model/ValueObjects/TypeOfMedication.cs",
+      "base_sha256": "51f32682d3d821ee628fb0c170bfc12d28cc615b8a21df4bda315a912f7392bf",
+      "delivered_sha256": "51f32682d3d821ee628fb0c170bfc12d28cc615b8a21df4bda315a912f7392bf",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Domain/Repositories/IDeviceRepository.cs",
+      "base_sha256": "414d164994c063911b2e71afdeff601a4e7286e9efe67383e1c17e397f2a62f5",
+      "delivered_sha256": "414d164994c063911b2e71afdeff601a4e7286e9efe67383e1c17e397f2a62f5",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Infrastructure/Persistence/EFC/Configuration/MonitoringContextConfiguration.cs",
+      "base_sha256": "7e3e7dde8fddcc8ac7726304334c36ed9c64252107bd0598b3e38b55ac8a8e61",
+      "delivered_sha256": "7e3e7dde8fddcc8ac7726304334c36ed9c64252107bd0598b3e38b55ac8a8e61",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Infrastructure/Persistence/EFC/Repositories/DeviceRepository.cs",
+      "base_sha256": "8fea16520f04e404fcf35274c55d3470d99c8ad7948c4ddc9862407b2e80821b",
+      "delivered_sha256": "8fea16520f04e404fcf35274c55d3470d99c8ad7948c4ddc9862407b2e80821b",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/DevicesController.cs",
+      "base_sha256": "dbb869a0e41772d6a832ef3f47fc92daed90cd03c2baab5d243bca6282de3015",
+      "delivered_sha256": "dbb869a0e41772d6a832ef3f47fc92daed90cd03c2baab5d243bca6282de3015",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/EstablishmentDevicesController.cs",
+      "base_sha256": "a0a5386711aa947fe82fdc0b8fc32fc062fed5f61c0f0c26e2e892abe0803cab",
+      "delivered_sha256": "a0a5386711aa947fe82fdc0b8fc32fc062fed5f61c0f0c26e2e892abe0803cab",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/Resources/CreateDeviceResource.cs",
+      "base_sha256": "f014cef2d2cbb15658a7d259de5454968d1400562459d9b5955ab0e0f82ca8a7",
+      "delivered_sha256": "f014cef2d2cbb15658a7d259de5454968d1400562459d9b5955ab0e0f82ca8a7",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/Resources/CreateNestedDeviceResource.cs",
+      "base_sha256": "3056272d1699b93d70975bbb78ce881a528a12002a84a30ceff9f3de283ed3b6",
+      "delivered_sha256": "3056272d1699b93d70975bbb78ce881a528a12002a84a30ceff9f3de283ed3b6",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/Resources/DeviceResource.cs",
+      "base_sha256": "2c447ce5879777f3a96a24d3a442d24d57b5e7a5bc343dcb889019a0a33d96a4",
+      "delivered_sha256": "2c447ce5879777f3a96a24d3a442d24d57b5e7a5bc343dcb889019a0a33d96a4",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/Resources/UpdateDeviceSensorDataResource.cs",
+      "base_sha256": "ba44439200a4e876c9cf3d9c9a7ed113d2980bb9cef6785a63d871391c1ec6f8",
+      "delivered_sha256": "ba44439200a4e876c9cf3d9c9a7ed113d2980bb9cef6785a63d871391c1ec6f8",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Interfaces/REST/Transform/DeviceResourceFromEntityAssembler.cs",
+      "base_sha256": "e8d097ac1ca36ea333d3a8b466a8794d7c87efc3ac16e542d5ed471f157090ee",
+      "delivered_sha256": "e8d097ac1ca36ea333d3a8b466a8794d7c87efc3ac16e542d5ed471f157090ee",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Resources/MonitoringMessages.cs",
+      "base_sha256": "6298d899cb6143b06acaa8399a327969a79b22bba6c1ff090366412cfa74842f",
+      "delivered_sha256": "6298d899cb6143b06acaa8399a327969a79b22bba6c1ff090366412cfa74842f",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Resources/MonitoringMessages.es.resx",
+      "base_sha256": "b9e726f083c0c5e629652d854a30cceb142c6697543f3403c32e1e61fbe23a49",
+      "delivered_sha256": "b9e726f083c0c5e629652d854a30cceb142c6697543f3403c32e1e61fbe23a49",
+      "modified": false
+    },
+    {
+      "path": "Monitoring/Resources/MonitoringMessages.resx",
+      "base_sha256": "2926028510dfc719cfcddc091a250ea9a94a146ce74001dd5174db68fecdbd65",
+      "delivered_sha256": "2926028510dfc719cfcddc091a250ea9a94a146ce74001dd5174db68fecdbd65",
+      "modified": false
+    },
+    {
+      "path": "Properties/launchSettings.json",
+      "base_sha256": "87dcd70580b40c17a74974c8f8f2d1db8f475c443a056f0d5a8d1c383a16cc82",
+      "delivered_sha256": "87dcd70580b40c17a74974c8f8f2d1db8f475c443a056f0d5a8d1c383a16cc82",
+      "modified": false
+    },
+    {
+      "path": "Shared/Application/Patterns/Result.cs",
+      "base_sha256": "b2bee33528d3388d1221afaed6a8c86eaf54d044f707ebe1c60f88a9608a10c8",
+      "delivered_sha256": "b2bee33528d3388d1221afaed6a8c86eaf54d044f707ebe1c60f88a9608a10c8",
+      "modified": false
+    },
+    {
+      "path": "Shared/Domain/Model/Error.cs",
+      "base_sha256": "95762e9cd462a1e83137331966c2c852ea7c714374e275ba9fc856febdc620ea",
+      "delivered_sha256": "95762e9cd462a1e83137331966c2c852ea7c714374e275ba9fc856febdc620ea",
+      "modified": false
+    },
+    {
+      "path": "Shared/Domain/Model/IAuditableEntity.cs",
+      "base_sha256": "f0bf9a27bcbc068c39079b24e03c1bb7c64dcd6f468aea2bdef1de7d65f6dc4e",
+      "delivered_sha256": "f0bf9a27bcbc068c39079b24e03c1bb7c64dcd6f468aea2bdef1de7d65f6dc4e",
+      "modified": false
+    },
+    {
+      "path": "Shared/Domain/Repositories/IBaseRepository.cs",
+      "base_sha256": "a7c155f1892dd6b1b4bcc314206976f0753dc6ffa4aa15b1c2f69141ab6bf7db",
+      "delivered_sha256": "a7c155f1892dd6b1b4bcc314206976f0753dc6ffa4aa15b1c2f69141ab6bf7db",
+      "modified": false
+    },
+    {
+      "path": "Shared/Domain/Repositories/IUnitOfWork.cs",
+      "base_sha256": "8985b576296b87a3054b7ee340a8efab0303ba0bc764f282b738cc45e466b44f",
+      "delivered_sha256": "8985b576296b87a3054b7ee340a8efab0303ba0bc764f282b738cc45e466b44f",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Interfaces/ASP/Configuration/KebabCaseRouteNamingConvention.cs",
+      "base_sha256": "f6e24831c91296b7cfca7a91180f79cfcdda6c05f50541f6e17a11c38fb394d9",
+      "delivered_sha256": "f6e24831c91296b7cfca7a91180f79cfcdda6c05f50541f6e17a11c38fb394d9",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Interfaces/ASP/Configuration/Extensions/StringExtensions.cs",
+      "base_sha256": "10c7e1959ce378d2ee4c846b737ae1f40d86ad7e34a77a9cc2c759930767036d",
+      "delivered_sha256": "10c7e1959ce378d2ee4c846b737ae1f40d86ad7e34a77a9cc2c759930767036d",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/OpenApi/SwaggerEndpointDocumentationFilter.cs",
+      "base_sha256": "2143d2d87cd818e7a464a7cefed7aa363ef777059efc089d5ab502e1b3a548ec",
+      "delivered_sha256": "2143d2d87cd818e7a464a7cefed7aa363ef777059efc089d5ab502e1b3a548ec",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/OpenApi/SwaggerInfrastructureFilter.cs",
+      "base_sha256": "7628381f2b78d21228a0286ceb87ddceab7e09984be305b609e7b10d8d3cfbf7",
+      "delivered_sha256": "7628381f2b78d21228a0286ceb87ddceab7e09984be305b609e7b10d8d3cfbf7",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/DatabaseConnectionResolver.cs",
+      "base_sha256": "a19d075024582423da4dd9357c3201ba0834acf1d73616d1c3f3c95d78a9449f",
+      "delivered_sha256": "a19d075024582423da4dd9357c3201ba0834acf1d73616d1c3f3c95d78a9449f",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs",
+      "base_sha256": "2d9f2f61001a6bc749653fbb28ffc663a0844176e3782fd9317e3787bcddcb56",
+      "delivered_sha256": "2d9f2f61001a6bc749653fbb28ffc663a0844176e3782fd9317e3787bcddcb56",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Configuration/Extensions/DatabaseMigrationExtensions.cs",
+      "base_sha256": "b08252617325550c031c9824191c21b5dd67c098a7bc987aa1b8710f54a9fbe6",
+      "delivered_sha256": "b08252617325550c031c9824191c21b5dd67c098a7bc987aa1b8710f54a9fbe6",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Configuration/Extensions/ModelBuilderExtensions.cs",
+      "base_sha256": "7275a6222d5898930deaad16226839ae0dd6eedd779882c0a6f23146dcb854f3",
+      "delivered_sha256": "7275a6222d5898930deaad16226839ae0dd6eedd779882c0a6f23146dcb854f3",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Configuration/Extensions/StringExtensions.cs",
+      "base_sha256": "01475811455bb6aada6c778febf58670b97ea26cb88836e09a610b502b19b3b5",
+      "delivered_sha256": "01475811455bb6aada6c778febf58670b97ea26cb88836e09a610b502b19b3b5",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Interceptors/AuditableEntityInterceptor.cs",
+      "base_sha256": "dc4148a6d7fd45cc641fa00a41270ffeffdfd1c5faacf3de6ee84ea8fe917f4d",
+      "delivered_sha256": "dc4148a6d7fd45cc641fa00a41270ffeffdfd1c5faacf3de6ee84ea8fe917f4d",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260609120000_AddUsersTable.cs",
+      "base_sha256": "4269b16bf9a6c70eda65d3c7908ad27392a88f891edb93ebfb3c25cec23e068b",
+      "delivered_sha256": "4269b16bf9a6c70eda65d3c7908ad27392a88f891edb93ebfb3c25cec23e068b",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260609120000_AddUsersTable.Designer.cs",
+      "base_sha256": "58b150d8807f6c8e9171b10b4401dbab70f5bc578bf59b4ea8a5ddb95ecef5db",
+      "delivered_sha256": "58b150d8807f6c8e9171b10b4401dbab70f5bc578bf59b4ea8a5ddb95ecef5db",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260610130000_AddDevicesTable.cs",
+      "base_sha256": "434da52c387ef84750b5e9465387ba9d695d827dd373bf726968e6bf7f851fcf",
+      "delivered_sha256": "434da52c387ef84750b5e9465387ba9d695d827dd373bf726968e6bf7f851fcf",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260610130000_AddDevicesTable.Designer.cs",
+      "base_sha256": "c71ced36dbb4402b262016d74eedab927722661c7ccfbd0c00d002e3ade6c76f",
+      "delivered_sha256": "c71ced36dbb4402b262016d74eedab927722661c7ccfbd0c00d002e3ade6c76f",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260702093209_AddEstablishmentsOperatorsSubscriptions.cs",
+      "base_sha256": "f64504267911a2c2b87c86502e4dc239ee5bd9e523c3517e9aeae4d5fe8a2661",
+      "delivered_sha256": "f64504267911a2c2b87c86502e4dc239ee5bd9e523c3517e9aeae4d5fe8a2661",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260702093209_AddEstablishmentsOperatorsSubscriptions.Designer.cs",
+      "base_sha256": "a5843efba9c317bb3eadc5cbf687b91a73e3d9cdecbf2b7c50e4e2fc65ef1736",
+      "delivered_sha256": "a5843efba9c317bb3eadc5cbf687b91a73e3d9cdecbf2b7c50e4e2fc65ef1736",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260703042413_AddTransportsTable.cs",
+      "base_sha256": "8310385da0f1e0553df946c007c967abf662638a0dbb2ef255907e30e93c90ba",
+      "delivered_sha256": "8310385da0f1e0553df946c007c967abf662638a0dbb2ef255907e30e93c90ba",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260703042413_AddTransportsTable.Designer.cs",
+      "base_sha256": "e59366dbd6ca7fc3cea715dc00ee08cf2a9e6e525422b0093db0ac5ecc3d8431",
+      "delivered_sha256": "e59366dbd6ca7fc3cea715dc00ee08cf2a9e6e525422b0093db0ac5ecc3d8431",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/20260704130000_AddAdminsTable.cs",
+      "base_sha256": "f611533738284ac108b15f66926465984dbf579adb62bcf6c397bff3029c924b",
+      "delivered_sha256": "f611533738284ac108b15f66926465984dbf579adb62bcf6c397bff3029c924b",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Migrations/AppDbContextModelSnapshot.cs",
+      "base_sha256": "3454ca411502c0710b7fb97ddbcd3689585097bf5a1a67481a94255355ea6470",
+      "delivered_sha256": "3454ca411502c0710b7fb97ddbcd3689585097bf5a1a67481a94255355ea6470",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Repositories/BaseRepository.cs",
+      "base_sha256": "53945bcbcfbb3d911835124feba810746ff1dba85ca0d7746db524b294d42bdc",
+      "delivered_sha256": "53945bcbcfbb3d911835124feba810746ff1dba85ca0d7746db524b294d42bdc",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Persistence/EFC/Repositories/UnitOfWork.cs",
+      "base_sha256": "74132a9bf93db5ce69bbf83f191d45e1e5642d0098063958ddf2068acf3e5cc2",
+      "delivered_sha256": "74132a9bf93db5ce69bbf83f191d45e1e5642d0098063958ddf2068acf3e5cc2",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Pipeline/Middleware/Components/GlobalExceptionHandlerMiddleware.cs",
+      "base_sha256": "f8b68e22b1441ec66327382d340ff1df3fb2dc20d93af653521949c0d6150265",
+      "delivered_sha256": "f8b68e22b1441ec66327382d340ff1df3fb2dc20d93af653521949c0d6150265",
+      "modified": false
+    },
+    {
+      "path": "Shared/Infrastructure/Pipeline/Middleware/Extensions/MiddlewareExtensions.cs",
+      "base_sha256": "230da91327b19c0a446b53ad6cbc8188dbea36b8a531575d705884279293f03e",
+      "delivered_sha256": "230da91327b19c0a446b53ad6cbc8188dbea36b8a531575d705884279293f03e",
+      "modified": false
+    },
+    {
+      "path": "Shared/Interfaces/REST/ProblemDetails/ProblemDetailsFactory.cs",
+      "base_sha256": "9e552c8f18e1bc3ecbecf6d632473485d21489e030db2b03063a716cff4503a6",
+      "delivered_sha256": "9e552c8f18e1bc3ecbecf6d632473485d21489e030db2b03063a716cff4503a6",
+      "modified": false
+    },
+    {
+      "path": "Shared/Resources/CommonMessages.cs",
+      "base_sha256": "78e5a27c8280af191c353aef25a61a1bb84af48e7dccf7eb819996e4ab8d0d3b",
+      "delivered_sha256": "78e5a27c8280af191c353aef25a61a1bb84af48e7dccf7eb819996e4ab8d0d3b",
+      "modified": false
+    },
+    {
+      "path": "Shared/Resources/CommonMessages.es.resx",
+      "base_sha256": "98447b1e6cfe1f745648330d8ffc15133ecd9f76048cd8cefeec31ba6b72f3e8",
+      "delivered_sha256": "98447b1e6cfe1f745648330d8ffc15133ecd9f76048cd8cefeec31ba6b72f3e8",
+      "modified": false
+    },
+    {
+      "path": "Shared/Resources/CommonMessages.resx",
+      "base_sha256": "0c3d1b8e75baec72765fc5ba287fdaa90b0eef8351f6421e8318bfada1f6b9ce",
+      "delivered_sha256": "0c3d1b8e75baec72765fc5ba287fdaa90b0eef8351f6421e8318bfada1f6b9ce",
+      "modified": false
+    },
+    {
+      "path": "Shared/Resources/Errors/ErrorMessages.cs",
+      "base_sha256": "e28df127453a32aa296ea1de0efb0a8de84c9100de5143194dedd8a757b7252d",
+      "delivered_sha256": "e28df127453a32aa296ea1de0efb0a8de84c9100de5143194dedd8a757b7252d",
+      "modified": false
+    },
+    {
+      "path": "Shared/Resources/Errors/ErrorMessages.es.resx",
+      "base_sha256": "82de7a64c9d9addb4a920f70638cdea6df5a9a24c9b92453b22798c862e649dc",
+      "delivered_sha256": "82de7a64c9d9addb4a920f70638cdea6df5a9a24c9b92453b22798c862e649dc",
+      "modified": false
+    },
+    {
+      "path": "Shared/Resources/Errors/ErrorMessages.resx",
+      "base_sha256": "56544d55feb71842f2b30a4dab4e85cf55761a9817477f10245c6ebbf6d78c5a",
+      "delivered_sha256": "56544d55feb71842f2b30a4dab4e85cf55761a9817477f10245c6ebbf6d78c5a",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Application/CommandServices/ISubscriptionCommandService.cs",
+      "base_sha256": "d972adfa98d4e7b9f3f506d97af42779045d8600c39a055044c7248a4f47a32e",
+      "delivered_sha256": "d972adfa98d4e7b9f3f506d97af42779045d8600c39a055044c7248a4f47a32e",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Application/Internal/CommandServices/SubscriptionCommandService.cs",
+      "base_sha256": "54a1336514b1b55ada01b044c47765fd9f93e396d277c9653154d03f354bb2b1",
+      "delivered_sha256": "54a1336514b1b55ada01b044c47765fd9f93e396d277c9653154d03f354bb2b1",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Application/Internal/QueryServices/SubscriptionQueryService.cs",
+      "base_sha256": "b020ae309db617eaefac16bf29b28a5804ccb88fb774345671df2e4744e31591",
+      "delivered_sha256": "b020ae309db617eaefac16bf29b28a5804ccb88fb774345671df2e4744e31591",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Application/QueryServices/ISubscriptionQueryService.cs",
+      "base_sha256": "2547c186ecf3cc23cfeb8e90a9f0197e341b755e4b48ad9be0d82783aa04897d",
+      "delivered_sha256": "2547c186ecf3cc23cfeb8e90a9f0197e341b755e4b48ad9be0d82783aa04897d",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/Aggregates/Subscription.cs",
+      "base_sha256": "89cc4acf7a10a2578a4b41c2c8a6ab70f751af7f208135e5a95ac72078825115",
+      "delivered_sha256": "89cc4acf7a10a2578a4b41c2c8a6ab70f751af7f208135e5a95ac72078825115",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/Aggregates/SubscriptionAudit.cs",
+      "base_sha256": "5392a648d9e676d95008537f321aaa31293c23b045b507df627cdaca20a2bef2",
+      "delivered_sha256": "5392a648d9e676d95008537f321aaa31293c23b045b507df627cdaca20a2bef2",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/Commands/CreateSubscriptionCommand.cs",
+      "base_sha256": "4f1d43e36ebbff129697c11acd28a16dad22dfcc8dffb537530f8625eb2f6167",
+      "delivered_sha256": "4f1d43e36ebbff129697c11acd28a16dad22dfcc8dffb537530f8625eb2f6167",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/Errors/SubscriptionsError.cs",
+      "base_sha256": "96a06564b854b9b8ab22b61edceaf15652b3f9ca930c3018d399a606611be4f2",
+      "delivered_sha256": "96a06564b854b9b8ab22b61edceaf15652b3f9ca930c3018d399a606611be4f2",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/Errors/SubscriptionsErrors.cs",
+      "base_sha256": "fda8745bd2215f5efe82d7242b5ed5ffbbf3e3e26c7f880d1fe81fef5966b694",
+      "delivered_sha256": "fda8745bd2215f5efe82d7242b5ed5ffbbf3e3e26c7f880d1fe81fef5966b694",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/Queries/GetAllSubscriptionsQuery.cs",
+      "base_sha256": "2fbc2249a2f114f55fe29dd1cffe048e22215f9f83b9489149b48989b827e17f",
+      "delivered_sha256": "2fbc2249a2f114f55fe29dd1cffe048e22215f9f83b9489149b48989b827e17f",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/ValueObjects/AdminId.cs",
+      "base_sha256": "4d752d0adcfe9e9b8dcb3cd1ebc8bbb78ac31537c4b6a4ec6b999dcf6e934591",
+      "delivered_sha256": "4d752d0adcfe9e9b8dcb3cd1ebc8bbb78ac31537c4b6a4ec6b999dcf6e934591",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/ValueObjects/SubscriptionPlan.cs",
+      "base_sha256": "4dff4591369ba9dee4659a035fa216f4f862f82aee56f8f94687fec2a148a70d",
+      "delivered_sha256": "4dff4591369ba9dee4659a035fa216f4f862f82aee56f8f94687fec2a148a70d",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Model/ValueObjects/SubscriptionStatus.cs",
+      "base_sha256": "c3389292274baaf3bd79bae859c06030813d14a5be62effa89bea5fb3fdd984b",
+      "delivered_sha256": "c3389292274baaf3bd79bae859c06030813d14a5be62effa89bea5fb3fdd984b",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Domain/Repositories/ISubscriptionRepository.cs",
+      "base_sha256": "c1c9090cef5926ba8423bb1702065838a0d64058ebedea12930286d231ec7472",
+      "delivered_sha256": "c1c9090cef5926ba8423bb1702065838a0d64058ebedea12930286d231ec7472",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Infrastructure/Persistence/EFC/Configuration/SubscriptionsContextConfiguration.cs",
+      "base_sha256": "642f5e25582d20716665c52967a0e4813d4599b104e823011fd080d5873cee59",
+      "delivered_sha256": "642f5e25582d20716665c52967a0e4813d4599b104e823011fd080d5873cee59",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Infrastructure/Persistence/EFC/Repositories/SubscriptionRepository.cs",
+      "base_sha256": "1cd6c9254b773204c5f9b5f0bba898d8ec1131873d0a7d37044fb6991fcdd43d",
+      "delivered_sha256": "1cd6c9254b773204c5f9b5f0bba898d8ec1131873d0a7d37044fb6991fcdd43d",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Interfaces/REST/AdminSubscriptionsController.cs",
+      "base_sha256": "59fdb7df501ea38f70c7bbfc7833cd8d6e6e4602627226fb79d4e5d54223de86",
+      "delivered_sha256": "59fdb7df501ea38f70c7bbfc7833cd8d6e6e4602627226fb79d4e5d54223de86",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Interfaces/REST/SubscriptionsController.cs",
+      "base_sha256": "6138f7078a49c501d2836b059b6e8e2b0b993c7d3d5bcdeba611d1c13d8307f6",
+      "delivered_sha256": "6138f7078a49c501d2836b059b6e8e2b0b993c7d3d5bcdeba611d1c13d8307f6",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Interfaces/REST/Resources/CreateNestedSubscriptionResource.cs",
+      "base_sha256": "56f2b91cfda539ab9e8191297713019cebb3b4a02987a80b732eaaf6cca33f08",
+      "delivered_sha256": "56f2b91cfda539ab9e8191297713019cebb3b4a02987a80b732eaaf6cca33f08",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Interfaces/REST/Resources/CreateSubscriptionResource.cs",
+      "base_sha256": "08c148cf64cd9852213f746f68f1ed5603a788639070b950e77e2e795f260010",
+      "delivered_sha256": "08c148cf64cd9852213f746f68f1ed5603a788639070b950e77e2e795f260010",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Interfaces/REST/Resources/SubscriptionResource.cs",
+      "base_sha256": "3398c72719a23a5059f49187878854e3ad4aa6a65b2e3293ea8bdcab91cdd1aa",
+      "delivered_sha256": "3398c72719a23a5059f49187878854e3ad4aa6a65b2e3293ea8bdcab91cdd1aa",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Interfaces/REST/Transform/SubscriptionResourceFromEntityAssembler.cs",
+      "base_sha256": "e199af2dfe322bc1dbe728dad0cd3e9e25e4069c6f43cb3c268d7cf11d1f7210",
+      "delivered_sha256": "e199af2dfe322bc1dbe728dad0cd3e9e25e4069c6f43cb3c268d7cf11d1f7210",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Resources/SubscriptionsMessages.cs",
+      "base_sha256": "691f825f4437a1d23e481c067ba0c87d656ad833990295d0c039df1f85ea5cfe",
+      "delivered_sha256": "691f825f4437a1d23e481c067ba0c87d656ad833990295d0c039df1f85ea5cfe",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Resources/SubscriptionsMessages.es.resx",
+      "base_sha256": "19ad61f656187c1f0f56768519a5a994046fc169aa6359d8728a88edc0e483f9",
+      "delivered_sha256": "19ad61f656187c1f0f56768519a5a994046fc169aa6359d8728a88edc0e483f9",
+      "modified": false
+    },
+    {
+      "path": "Subscriptions/Resources/SubscriptionsMessages.resx",
+      "base_sha256": "5596b156dfd0b6bac9ae763a456f1f8beb9c730fe4ec49b00dfbff00b5037ae4",
+      "delivered_sha256": "5596b156dfd0b6bac9ae763a456f1f8beb9c730fe4ec49b00dfbff00b5037ae4",
+      "modified": false
+    }
+  ],
+  "published": false,
+  "patch": "cors-jwt.patch",
+  "validation": {
+    "cases": 14,
+    "passed": 14,
+    "failed": 0,
+    "scope": "CORS and JWT authentication; no claim of full role or tenant authorization"
+  },
+  "published_repository": "https://github.com/1ASI0732-2620-9082-Aether-System/KairoLabs-Platform",
+  "validation_date": "2026-10-31",
+  "frontend_fixture": "Historical gateway snapshot from frontend base commit; IT-WEB-01 uses this version explicitly."
+}

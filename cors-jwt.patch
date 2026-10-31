@@ -1,0 +1,114 @@
+--- a/TechnoByteLambders.MediTrackSensor.Platform/Program.cs
++++ b/TechnoByteLambders.MediTrackSensor.Platform/Program.cs
+@@ -1,5 +1,9 @@
+ using Microsoft.EntityFrameworkCore;
+ using Microsoft.Extensions.Localization;
++using Microsoft.AspNetCore.Authentication.JwtBearer;
++using Microsoft.AspNetCore.Authorization;
++using Microsoft.IdentityModel.Tokens;
++using System.Text;
+ using TechnoByteLambders.MediTrackSensor.Platform.Iam.Domain.Model.Aggregates;
+ using TechnoByteLambders.MediTrackSensor.Platform.Establishments.Application.CommandServices;
+ using TechnoByteLambders.MediTrackSensor.Platform.Establishments.Application.Internal.CommandServices;
+@@ -82,12 +86,49 @@
+             .WithOrigins(
+                 "http://localhost:5173",
+                 "http://localhost:4173",
++                "https://kairo-labs-frontend.vercel.app",
+                 "https://medi-track-sensor-frontend.vercel.app"
+             )
+             .AllowAnyHeader()
+             .AllowAnyMethod()
+             .AllowCredentials();
+     });
++});
++
++var jwtSecret = builder.Configuration["Jwt:Secret"]
++    ?? throw new InvalidOperationException("Jwt:Secret is required.");
++if (Encoding.UTF8.GetByteCount(jwtSecret) < 32)
++    throw new InvalidOperationException("Jwt:Secret must contain at least 32 UTF-8 bytes.");
++var jwtIssuer = builder.Configuration["Jwt:Issuer"]
++    ?? throw new InvalidOperationException("Jwt:Issuer is required.");
++var jwtAudience = builder.Configuration["Jwt:Audience"]
++    ?? throw new InvalidOperationException("Jwt:Audience is required.");
++
++builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
++    .AddJwtBearer(options =>
++    {
++        options.MapInboundClaims = false;
++        options.IncludeErrorDetails = false;
++        options.TokenValidationParameters = new TokenValidationParameters
++        {
++            ValidateIssuerSigningKey = true,
++            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecret)),
++            ValidateIssuer = true,
++            ValidIssuer = jwtIssuer,
++            ValidateAudience = true,
++            ValidAudience = jwtAudience,
++            ValidateLifetime = true,
++            RequireExpirationTime = true,
++            RequireSignedTokens = true,
++            ValidAlgorithms = [SecurityAlgorithms.HmacSha256],
++            ClockSkew = TimeSpan.FromSeconds(30)
++        };
++    });
++builder.Services.AddAuthorization(options =>
++{
++    options.FallbackPolicy = new AuthorizationPolicyBuilder()
++        .RequireAuthenticatedUser()
++        .Build();
+ });
+ 
+ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+@@ -145,6 +186,7 @@
+ var app = builder.Build();
+ 
+ app.MapGet("/health", () => Results.Ok(new { status = "healthy", service = "medi-track-sensor-platform" }))
++    .AllowAnonymous()
+     .ExcludeFromDescription();
+ app.MapGet("/health/db", async (AppDbContext db, ILogger<Program> logger) =>
+ {
+@@ -163,8 +205,8 @@
+             new { status = "unhealthy", database = "error", detail = ex.Message },
+             statusCode: 503);
+     }
+-}).ExcludeFromDescription();
+-app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
++}).AllowAnonymous().ExcludeFromDescription();
++app.MapGet("/", () => Results.Redirect("/swagger")).AllowAnonymous().ExcludeFromDescription();
+ 
+ using (var scope = app.Services.CreateScope())
+ {
+@@ -232,6 +274,7 @@
+ if (app.Environment.IsDevelopment())
+     app.UseHttpsRedirection();
+ app.UseCors("FrontendPolicy");
++app.UseAuthentication();
+ app.UseAuthorization();
+ app.MapControllers();
+ app.Run();
+--- a/TechnoByteLambders.MediTrackSensor.Platform/Iam/Interfaces/REST/UsersController.cs
++++ b/TechnoByteLambders.MediTrackSensor.Platform/Iam/Interfaces/REST/UsersController.cs
+@@ -1,5 +1,6 @@
+ using Microsoft.AspNetCore.Http;
+ using Microsoft.AspNetCore.Mvc;
++using Microsoft.AspNetCore.Authorization;
+ using TechnoByteLambders.MediTrackSensor.Platform.Iam.Application.CommandServices;
+ using TechnoByteLambders.MediTrackSensor.Platform.Iam.Application.QueryServices;
+ using TechnoByteLambders.MediTrackSensor.Platform.Iam.Domain.Model.Aggregates;
+@@ -30,6 +31,7 @@
+     }
+ 
+     [HttpPost]
++    [AllowAnonymous]
+     public async Task<IActionResult> SignUp([FromBody] SignUpResource resource, CancellationToken ct)
+     {
+         var command = SignUpCommandFromResourceAssembler.ToCommandFromResource(resource);
+@@ -50,6 +52,7 @@
+     }
+ 
+     [HttpPost("sign-in")]
++    [AllowAnonymous]
+     public async Task<IActionResult> SignIn(
+         [FromBody] SignInResource resource,
+         CancellationToken cancellationToken)

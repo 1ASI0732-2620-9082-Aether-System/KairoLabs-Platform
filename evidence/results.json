@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-30",
+  "backend": "c6c0bc7cfe03014f0ec311d8fb6c6a3ae8dddb03",
+  "backend_local_changes": [
+    "Program.cs: CORS and JWT authentication",
+    "Iam/Interfaces/REST/UsersController.cs: public sign-up/sign-in"
+  ],
+  "published": false,
+  "environment": {
+    "api": "http://127.0.0.1:5187",
+    "database": "kairolabs_it_b20383c4d7c9",
+    "mysql": "8.4.13",
+    "node": "v24.11.1"
+  },
+  "executed": 14,
+  "passed": 14,
+  "failed": 0,
+  "results": [
+    {
+      "id": "IT-IAM-01",
+      "title": "login valido integra API, BCrypt y MySQL sin exponer credenciales",
+      "status": "passed",
+      "requests": 1
+    },
+    {
+      "id": "IT-IAM-02",
+      "title": "clave incorrecta devuelve 401 y no emite token",
+      "status": "passed",
+      "requests": 1
+    },
+    {
+      "id": "IT-EST-01",
+      "title": "sedes creadas se recuperan por administrador y por SQL independiente",
+      "status": "passed",
+      "requests": 1
+    },
+    {
+      "id": "IT-OP-01",
+      "title": "asignacion de operador no mezcla sedes",
+      "status": "passed",
+      "requests": 3
+    },
+    {
+      "id": "IT-DEV-01",
+      "title": "dispositivo se recupera con su sede, ubicacion y tipo",
+      "status": "passed",
+      "requests": 1
+    },
+    {
+      "id": "IT-DEV-02",
+      "title": "lectura persiste en MySQL y se recupera en otra solicitud",
+      "status": "passed",
+      "requests": 2
+    },
+    {
+      "id": "IT-DEV-03",
+      "title": "actualizar desde otra sede devuelve 404 sin modificar la lectura",
+      "status": "passed",
+      "requests": 3
+    },
+    {
+      "id": "IT-DEV-04",
+      "title": "DoorStatus invalido devuelve 400 sin persistencia parcial",
+      "status": "passed",
+      "requests": 3
+    },
+    {
+      "id": "IT-DEV-05",
+      "title": "tipo de medicamento invalido devuelve 400 sin crear dispositivo",
+      "status": "passed",
+      "requests": 3
+    },
+    {
+      "id": "IT-LOG-01",
+      "title": "transporte guarda lectura y rechaza identificador inexistente",
+      "status": "passed",
+      "requests": 4
+    },
+    {
+      "id": "IT-SUB-01",
+      "title": "suscripcion completa ciclo crear consultar eliminar y nueva consulta",
+      "status": "passed",
+      "requests": 4
+    },
+    {
+      "id": "IT-WEB-01",
+      "title": "gateways Axios y assemblers reales consumen API y datos persistidos",
+      "status": "passed",
+      "requests": 1
+    },
+    {
+      "id": "IT-WEB-02",
+      "title": "CORS permite origen local rechaza ajeno y admite dominio KairoLabs",
+      "status": "passed",
+      "requests": 3
+    },
+    {
+      "id": "IT-SEC-01",
+      "title": "API exige autenticacion para listar datos operativos",
+      "status": "passed",
+      "requests": 7
+    }
+  ]
+}

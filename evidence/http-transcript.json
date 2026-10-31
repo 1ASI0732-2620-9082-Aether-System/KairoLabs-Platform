@@ -1,0 +1,864 @@
+[
+  {
+    "method": "GET",
+    "path": "/health/db",
+    "status": 200,
+    "response": {
+      "status": "healthy",
+      "database": "connected",
+      "users": 0
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/users",
+    "request": {
+      "name": "Integration admin",
+      "dni": "00000000",
+      "email": "it-admin-mvwtc50m@example.invalid",
+      "phone": "900000000",
+      "job_title": "Pruebas",
+      "entry_date": "2026-10-30",
+      "role": "Admin",
+      "password": "[REDACTED]",
+      "photo": "",
+      "entity_name": "Entidad IT mvwtc50m"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "Integration admin",
+      "dni": "00000000",
+      "email": "it-admin-mvwtc50m@example.invalid",
+      "phone": "900000000",
+      "job_title": "Pruebas",
+      "entry_date": "2026-10-30",
+      "role": "Admin",
+      "photo": "",
+      "created_at": "2026-10-31T19:47:35.9573627+00:00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/users/sign-in",
+    "request": {
+      "email": "it-admin-mvwtc50m@example.invalid",
+      "password": "[REDACTED]"
+    },
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 1,
+        "name": "Integration admin",
+        "dni": "00000000",
+        "email": "it-admin-mvwtc50m@example.invalid",
+        "phone": "900000000",
+        "job_title": "Pruebas",
+        "entry_date": "2026-10-30",
+        "role": "Admin",
+        "photo": "",
+        "created_at": "2026-10-31T19:47:36+00:00"
+      },
+      "token": "[REDACTED]"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admins",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "entity_name": "Entidad IT mvwtc50m",
+        "entity_code": "ENT-1",
+        "schedule": "",
+        "user_id": 1
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/users",
+    "request": {
+      "name": "Integration operator",
+      "dni": "00000000",
+      "email": "it-operator-mvwtc50m@example.invalid",
+      "phone": "900000000",
+      "job_title": "Pruebas",
+      "entry_date": "2026-10-30",
+      "role": "Operator",
+      "password": "[REDACTED]",
+      "photo": ""
+    },
+    "status": 201,
+    "response": {
+      "id": 2,
+      "name": "Integration operator",
+      "dni": "00000000",
+      "email": "it-operator-mvwtc50m@example.invalid",
+      "phone": "900000000",
+      "job_title": "Pruebas",
+      "entry_date": "2026-10-30",
+      "role": "Operator",
+      "photo": "",
+      "created_at": "2026-10-31T19:47:36.8587487+00:00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admins/1/establishments",
+    "request": {
+      "establishment_name": "Sede IT A",
+      "establishment_type": "Warehouse",
+      "address": "Dirección sintética 100",
+      "district": "Pruebas",
+      "city_region": "Lima",
+      "country": "Peru",
+      "latitude": -12.04,
+      "longitude": -77.03,
+      "phone": "900000000",
+      "email": "site@example.invalid",
+      "website": "https://example.invalid"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "establishment_name": "Sede IT A",
+      "establishment_type": "Warehouse",
+      "address": "Dirección sintética 100",
+      "district": "Pruebas",
+      "city_region": "Lima",
+      "country": "Peru",
+      "phone": "900000000",
+      "email": "site@example.invalid",
+      "website": "https://example.invalid",
+      "latitude": -12.04,
+      "longitude": -77.03,
+      "admin_id": 1,
+      "created_at": "2026-10-31T19:47:36.9220091+00:00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admins/1/establishments",
+    "request": {
+      "establishment_name": "Sede IT B",
+      "establishment_type": "Warehouse",
+      "address": "Dirección sintética 100",
+      "district": "Pruebas",
+      "city_region": "Lima",
+      "country": "Peru",
+      "latitude": -12.04,
+      "longitude": -77.03,
+      "phone": "900000000",
+      "email": "site@example.invalid",
+      "website": "https://example.invalid"
+    },
+    "status": 201,
+    "response": {
+      "id": 2,
+      "establishment_name": "Sede IT B",
+      "establishment_type": "Warehouse",
+      "address": "Dirección sintética 100",
+      "district": "Pruebas",
+      "city_region": "Lima",
+      "country": "Peru",
+      "phone": "900000000",
+      "email": "site@example.invalid",
+      "website": "https://example.invalid",
+      "latitude": -12.04,
+      "longitude": -77.03,
+      "admin_id": 1,
+      "created_at": "2026-10-31T19:47:36.9662009+00:00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/establishments/1/devices",
+    "request": {
+      "exact_location": "Refrigerador IT",
+      "type_of_medication": "Refrigerated",
+      "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "exact_location": "Refrigerador IT",
+      "type_of_medication": "Refrigerated",
+      "door_status": "Closed",
+      "temperature": 0,
+      "humidity": 0,
+      "light_intensity": 0,
+      "air_quality": 0,
+      "vibration": 0,
+      "atmospheric_pressure": 0,
+      "suspended_particles": 0,
+      "establishment_id": 1,
+      "created_at": "2026-10-31T19:47:37.0053399+00:00",
+      "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/users/sign-in",
+    "request": {
+      "email": "it-admin-mvwtc50m@example.invalid",
+      "password": "[REDACTED]"
+    },
+    "status": 200,
+    "response": {
+      "user": {
+        "id": 1,
+        "name": "Integration admin",
+        "dni": "00000000",
+        "email": "it-admin-mvwtc50m@example.invalid",
+        "phone": "900000000",
+        "job_title": "Pruebas",
+        "entry_date": "2026-10-30",
+        "role": "Admin",
+        "photo": "",
+        "created_at": "2026-10-31T19:47:36+00:00"
+      },
+      "token": "[REDACTED]"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/users/sign-in",
+    "request": {
+      "email": "it-admin-mvwtc50m@example.invalid",
+      "password": "[REDACTED]"
+    },
+    "status": 401,
+    "response": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.2",
+      "title": "InvalidCredentials",
+      "status": 401,
+      "detail": "Invalid email or password.",
+      "instance": "/api/v1/users/sign-in",
+      "traceId": "00-6cb2fca97740b807b29e9b897f5f7065-45ad4e4e304bea1a-00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admins/1/establishments",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "establishment_name": "Sede IT A",
+        "establishment_type": "Warehouse",
+        "address": "Dirección sintética 100",
+        "district": "Pruebas",
+        "city_region": "Lima",
+        "country": "Peru",
+        "phone": "900000000",
+        "email": "site@example.invalid",
+        "website": "https://example.invalid",
+        "latitude": -12.04,
+        "longitude": -77.03,
+        "admin_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00"
+      },
+      {
+        "id": 2,
+        "establishment_name": "Sede IT B",
+        "establishment_type": "Warehouse",
+        "address": "Dirección sintética 100",
+        "district": "Pruebas",
+        "city_region": "Lima",
+        "country": "Peru",
+        "phone": "900000000",
+        "email": "site@example.invalid",
+        "website": "https://example.invalid",
+        "latitude": -12.04,
+        "longitude": -77.03,
+        "admin_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/establishments/1/operators",
+    "request": {
+      "schedule": "08:00-16:00",
+      "users_id": 2
+    },
+    "status": 200,
+    "response": {
+      "id": 1,
+      "alerts_answered": 0,
+      "schedule": "08:00-16:00",
+      "establishment_id": 1,
+      "users_id": 2
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/operators",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "alerts_answered": 0,
+        "schedule": "08:00-16:00",
+        "establishment_id": 1,
+        "users_id": 2
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/2/operators",
+    "status": 200,
+    "response": [],
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 0,
+        "humidity": 0,
+        "light_intensity": 0,
+        "air_quality": 0,
+        "vibration": 0,
+        "atmospheric_pressure": 0,
+        "suspended_particles": 0,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/establishments/1/devices/1/sensor-data",
+    "request": {
+      "temperature": 5,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "door_status": "Closed"
+    },
+    "status": 200,
+    "response": {
+      "id": 1,
+      "exact_location": "Refrigerador IT",
+      "type_of_medication": "Refrigerated",
+      "door_status": "Closed",
+      "temperature": 5,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "establishment_id": 1,
+      "created_at": "2026-10-31T19:47:37+00:00",
+      "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/establishments/2/devices/1/sensor-data",
+    "request": {
+      "temperature": 9,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "door_status": "Closed"
+    },
+    "status": 404,
+    "response": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Not Found",
+      "status": 404,
+      "traceId": "00-838cf005198b4aa5adcb1850d0e2f85a-8b5cf57e39a3db80-00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/establishments/1/devices/1/sensor-data",
+    "request": {
+      "temperature": 9,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "door_status": "INVALID"
+    },
+    "status": 400,
+    "response": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "DeviceUpdateFailed",
+      "status": 400,
+      "detail": "Invalid DoorStatus value.",
+      "instance": "/api/v1/establishments/1/devices/1/sensor-data",
+      "traceId": "00-e8ad8ef2a340acd54b3e8ca5937a4534-8cb3dfb38c3b0b15-00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/establishments/1/devices",
+    "request": {
+      "exact_location": "Invalid",
+      "type_of_medication": "INVALID"
+    },
+    "status": 400,
+    "response": {
+      "error": "Invalid TypeOfMedication value."
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/establishments/1/transports",
+    "request": {
+      "type_of_transport": "Van",
+      "type_of_medication": "Refrigerated",
+      "enabled_sensors": "{}"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "type_of_transport": "Van",
+      "type_of_medication": "Refrigerated",
+      "door_status": "Closed",
+      "temperature": 0,
+      "humidity": 0,
+      "light_intensity": 0,
+      "air_quality": 0,
+      "vibration": 0,
+      "atmospheric_pressure": 0,
+      "suspended_particles": 0,
+      "establishment_id": 1,
+      "created_at": "2026-10-31T19:47:38.2007072+00:00",
+      "enabled_sensors": "{}"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/establishments/1/transports/1/sensor-data",
+    "request": {
+      "temperature": 5,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "door_status": "Closed"
+    },
+    "status": 200,
+    "response": {
+      "id": 1,
+      "type_of_transport": "Van",
+      "type_of_medication": "Refrigerated",
+      "door_status": "Closed",
+      "temperature": 5,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "establishment_id": 1,
+      "created_at": "2026-10-31T19:47:38+00:00",
+      "enabled_sensors": "{}"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/establishments/1/transports",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "type_of_transport": "Van",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:38+00:00",
+        "enabled_sensors": "{}"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/establishments/1/transports/2147483647/sensor-data",
+    "request": {
+      "temperature": 5,
+      "humidity": 50,
+      "light_intensity": 120,
+      "air_quality": 420,
+      "vibration": 0.03,
+      "atmospheric_pressure": 1013,
+      "suspended_particles": 12,
+      "door_status": "Closed"
+    },
+    "status": 404,
+    "response": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Not Found",
+      "status": 404,
+      "traceId": "00-e62331f99c3eb30c92a773be496c6bed-44ed9d30b614d7ca-00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/admins/1/subscriptions",
+    "request": {
+      "plan": "Basic",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-30"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "plan": "Basic",
+      "status": "Pending",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-30",
+      "admin_id": 1,
+      "created_at": "2026-10-31T19:47:38.3788136+00:00"
+    },
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admins/1/subscriptions",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "plan": "Basic",
+        "status": "Pending",
+        "start_date": "2026-10-30",
+        "end_date": "2026-11-30",
+        "admin_id": 1,
+        "created_at": "2026-10-31T19:47:38+00:00"
+      }
+    ],
+    "corsOrigin": null
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/v1/admins/1/subscriptions/1",
+    "status": 204,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/admins/1/subscriptions",
+    "status": 200,
+    "response": [],
+    "corsOrigin": null
+  },
+  {
+    "component": "Axios gateways + assemblers",
+    "status": 200,
+    "userId": 1,
+    "deviceId": 1,
+    "mocks": false
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/v1/devices",
+    "status": 204,
+    "response": null,
+    "corsOrigin": "http://localhost:5173"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/v1/devices",
+    "status": 204,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/v1/devices",
+    "status": 204,
+    "response": null,
+    "corsOrigin": "https://kairo-labs-frontend.vercel.app"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 401,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 401,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 401,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 401,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 401,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 401,
+    "response": null,
+    "corsOrigin": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "exact_location": "Refrigerador IT",
+        "type_of_medication": "Refrigerated",
+        "door_status": "Closed",
+        "temperature": 5,
+        "humidity": 50,
+        "light_intensity": 120,
+        "air_quality": 420,
+        "vibration": 0.03,
+        "atmospheric_pressure": 1013,
+        "suspended_particles": 12,
+        "establishment_id": 1,
+        "created_at": "2026-10-31T19:47:37+00:00",
+        "enabled_sensors": "{\"temperature\":true,\"humidity\":true}"
+      }
+    ],
+    "corsOrigin": null
+  }
+]

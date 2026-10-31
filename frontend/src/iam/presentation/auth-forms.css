@@ -1,0 +1,228 @@
+.reg-compact {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reg-compact__head {
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+
+.reg-compact__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.reg-compact__logo {
+  width: 38px !important;
+  height: 38px !important;
+  max-width: 38px;
+  max-height: 38px;
+  margin: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.reg-compact__brand strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #112433;
+}
+
+.reg-compact__badge {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f37021;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.reg-compact__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #112433;
+}
+
+.reg-compact__hint {
+  margin: 0.4rem 0 0.85rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #7a8694;
+}
+
+.reg-compact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reg-compact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #112433;
+}
+
+.reg-compact__field input,
+.reg-compact input[type='email'],
+.reg-compact input[type='password'],
+.reg-compact input[type='text'] {
+  width: 100%;
+  box-sizing: border-box;
+  height: 42px;
+  padding: 0 0.9rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 450;
+  border-radius: 10px;
+  border: 1px solid #e4ddd4;
+  background: #fff !important;
+  color: #112433 !important;
+  box-shadow: none;
+}
+
+.reg-compact__field input:focus {
+  outline: none;
+  border-color: #f37021;
+  box-shadow: 0 0 0 3px rgba(243, 112, 33, 0.15);
+}
+
+.reg-compact__field input::placeholder {
+  color: #a39a90;
+}
+
+.reg-compact__field input:-webkit-autofill,
+.reg-compact__field input:-webkit-autofill:hover,
+.reg-compact__field input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #112433;
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 9999s ease-out;
+}
+
+.reg-compact__pw {
+  position: relative;
+}
+
+.reg-compact__pw input {
+  padding-right: 2.6rem;
+}
+
+.reg-compact__eye {
+  position: absolute;
+  right: 0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #7a8694;
+}
+
+.reg-compact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.reg-compact__muted {
+  font-size: 0.75rem;
+  font-weight: 450;
+  color: #7a8694;
+}
+
+.reg-compact__error {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #d63b3b;
+}
+
+.reg-compact__btn {
+  margin-top: 0.35rem;
+}
+
+.reg-compact__footer {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  color: #6b7785;
+}
+
+.reg-compact__footer .link-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #112433;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reg-compact__footer .link-btn:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reg-compact__form--signup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.75rem;
+  row-gap: 0.7rem;
+}
+
+.reg-compact__form--signup .reg-compact__btn {
+  grid-column: 1 / -1;
+  margin-top: 0.15rem;
+}
+
+.reg-compact__form--signup .reg-compact__swap {
+  min-width: 0;
+}
+
+.reg-compact__form--signup .reg-compact__field,
+.reg-compact__form--signup .reg-compact__swap {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .reg-compact__title {
+    font-size: 1.25rem;
+  }
+
+  .reg-compact__hint {
+    font-size: 0.8rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .reg-compact__form--signup {
+    grid-template-columns: 1fr;
+    row-gap: 0.65rem;
+  }
+
+  .reg-compact__row {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-compact__field input,
+  .reg-compact input[type='email'],
+  .reg-compact input[type='password'],
+  .reg-compact input[type='text'] {
+    height: 44px;
+    font-size: 16px; /* evita zoom iOS */
+  }
+}

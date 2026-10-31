@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "KairoLabs: ejecutar integracion real",
+    "type": "node",
+    "request": "launch",
+    "program": "${workspaceFolder}/scripts/run-integration.mjs",
+    "cwd": "${workspaceFolder}",
+    "console": "integratedTerminal",
+    "skipFiles": ["<node_internals>/**"]
+  }]
+}
