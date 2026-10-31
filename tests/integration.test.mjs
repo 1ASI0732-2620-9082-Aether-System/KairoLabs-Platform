@@ -42,7 +42,7 @@ function userPayload(role, suffix) {
 }
 
 function sitePayload(name) {
-    return { establishment_name: name, establishment_type: 'Warehouse', address: 'Dirección sintética 100', district: 'Pruebas', city_region: 'Lima', country: 'Peru', latitude: -12.04, longitude: -77.03, phone: '900000000', email: 'site@example.invalid', website: 'https://example.invalid' };
+    return { establishment_name: name, establishment_type: 'Warehouse', address: 'DirecciÃ³n sintÃ©tica 100', district: 'Pruebas', city_region: 'Lima', country: 'Peru', latitude: -12.04, longitude: -77.03, phone: '900000000', email: 'site@example.invalid', website: 'https://example.invalid' };
 }
 
 async function listDevices(site = a) {
@@ -95,7 +95,7 @@ before(async () => {
 after(() => {
     mkdirSync('evidence', { recursive: true });
     writeFileSync('evidence/http-transcript.json', JSON.stringify(evidence, null, 2));
-    writeFileSync('evidence/results.json', JSON.stringify({ date: '2026-10-30', backend: 'c6c0bc7cfe03014f0ec311d8fb6c6a3ae8dddb03', backend_local_changes: ['Program.cs: CORS and JWT authentication', 'Iam/Interfaces/REST/UsersController.cs: public sign-up/sign-in'], published: false, environment: { api: base, database: process.env.KAIROLABS_IT_DATABASE, mysql: sql('SELECT VERSION()'), node: process.version }, executed: results.length, passed: results.filter(x => x.status === 'passed').length, failed: results.filter(x => x.status === 'failed').length, results }, null, 2));
+    writeFileSync('evidence/results.json', JSON.stringify({ date: new Date().toISOString(), repository: 'https://github.com/1ASI0732-2620-9082-Aether-System/KairoLabs-Platform', original_backend_base: 'c6c0bc7cfe03014f0ec311d8fb6c6a3ae8dddb03', backend_changes: ['Program.cs: CORS and JWT authentication', 'Iam/Interfaces/REST/UsersController.cs: public sign-up/sign-in'], environment: { api: base, database: process.env.KAIROLABS_IT_DATABASE, mysql: sql('SELECT VERSION()'), node: process.version }, executed: results.length, passed: results.filter(x => x.status === 'passed').length, failed: results.filter(x => x.status === 'failed').length, results }, null, 2));
 });
 
 integration('IT-IAM-01', 'login valido integra API, BCrypt y MySQL sin exponer credenciales', async () => {
