@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="EstablishmentsError.EstablishmentNotFound" xml:space="preserve">
+    <value>Establecimiento no encontrado.</value>
+  </data>
+  <data name="EstablishmentsError.OperatorNotFound" xml:space="preserve">
+    <value>Operador no encontrado.</value>
+  </data>
+  <data name="EstablishmentsError.EstablishmentCreationFailed" xml:space="preserve">
+    <value>Ocurrió un error al crear el establecimiento.</value>
+  </data>
+  <data name="EstablishmentsError.OperatorCreationFailed" xml:space="preserve">
+    <value>Ocurrió un error al crear el operador.</value>
+  </data>
+  <data name="EstablishmentsError.EstablishmentUpdateFailed" xml:space="preserve">
+    <value>Ocurrió un error al actualizar el establecimiento.</value>
+  </data>
+  <data name="EstablishmentsError.OperatorUpdateFailed" xml:space="preserve">
+    <value>Ocurrió un error al actualizar el operador.</value>
+  </data>
+</root>

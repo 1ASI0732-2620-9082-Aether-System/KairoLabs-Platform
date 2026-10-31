@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="SubscriptionsError.SubscriptionNotFound" xml:space="preserve">
+    <value>Suscripción no encontrada.</value>
+  </data>
+  <data name="SubscriptionsError.SubscriptionAlreadyExists" xml:space="preserve">
+    <value>Este administrador ya tiene una suscripción activa.</value>
+  </data>
+  <data name="SubscriptionsError.SubscriptionCreationFailed" xml:space="preserve">
+    <value>Ocurrió un error al crear la suscripción.</value>
+  </data>
+  <data name="SubscriptionsError.SubscriptionUpdateFailed" xml:space="preserve">
+    <value>Ocurrió un error al actualizar la suscripción.</value>
+  </data>
+</root>

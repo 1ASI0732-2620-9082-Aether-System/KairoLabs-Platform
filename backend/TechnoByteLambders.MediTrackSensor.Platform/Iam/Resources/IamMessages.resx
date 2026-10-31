@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="IamError.UserNotFound" xml:space="preserve">
+    <value>User not found.</value>
+  </data>
+  <data name="IamError.UserAlreadyExists" xml:space="preserve">
+    <value>A user with this email already exists.</value>
+  </data>
+  <data name="IamError.InvalidCredentials" xml:space="preserve">
+    <value>Invalid email or password.</value>
+  </data>
+  <data name="IamError.UserCreationFailed" xml:space="preserve">
+    <value>An error occurred while creating the user.</value>
+  </data>
+  <data name="IamError.UserUpdateFailed" xml:space="preserve">
+    <value>An error occurred while updating the user.</value>
+  </data>
+  <data name="IamError.AdminNotFound" xml:space="preserve">
+    <value>Admin not found.</value>
+  </data>
+  <data name="IamError.AdminAlreadyExists" xml:space="preserve">
+    <value>An admin for this user already exists.</value>
+  </data>
+  <data name="IamError.AdminCreationFailed" xml:space="preserve">
+    <value>An error occurred while creating the admin.</value>
+  </data>
+  <data name="IamError.AdminUpdateFailed" xml:space="preserve">
+    <value>An error occurred while updating the admin.</value>
+  </data>
+</root>

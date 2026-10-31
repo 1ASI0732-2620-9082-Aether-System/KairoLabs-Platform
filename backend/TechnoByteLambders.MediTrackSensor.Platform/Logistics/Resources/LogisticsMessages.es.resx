@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="LogisticsError.TransportNotFound" xml:space="preserve">
+    <value>Transporte no encontrado.</value>
+  </data>
+  <data name="LogisticsError.TransportCreationFailed" xml:space="preserve">
+    <value>Ocurrió un error al crear el transporte.</value>
+  </data>
+  <data name="LogisticsError.TransportUpdateFailed" xml:space="preserve">
+    <value>Ocurrió un error al actualizar los datos del sensor del transporte.</value>
+  </data>
+</root>

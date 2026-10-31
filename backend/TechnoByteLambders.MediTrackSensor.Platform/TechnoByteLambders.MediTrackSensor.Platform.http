@@ -1,0 +1,5 @@
+@TechnoByteLambders.MediTrackSensor.Platform_HostAddress = http://localhost:5089
+
+DELETE {{TechnoByteLambders.MediTrackSensor.Platform_HostAddress}}/api/v1/subscriptions/1
+
+###

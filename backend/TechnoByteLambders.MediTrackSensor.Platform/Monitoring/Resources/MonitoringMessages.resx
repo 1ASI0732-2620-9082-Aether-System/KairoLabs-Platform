@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="MonitoringError.DeviceNotFound" xml:space="preserve">
+    <value>Device not found.</value>
+  </data>
+  <data name="MonitoringError.DeviceAlreadyExists" xml:space="preserve">
+    <value>A device already exists for this establishment.</value>
+  </data>
+  <data name="MonitoringError.DeviceCreationFailed" xml:space="preserve">
+    <value>An error occurred while creating the device.</value>
+  </data>
+  <data name="MonitoringError.DeviceUpdateFailed" xml:space="preserve">
+    <value>An error occurred while updating the device sensor data.</value>
+  </data>
+</root>

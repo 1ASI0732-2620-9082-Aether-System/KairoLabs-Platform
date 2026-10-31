@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="GenericError" xml:space="preserve">
+    <value>Ocurrió un error.</value>
+  </data>
+  <data name="OperationCancelled" xml:space="preserve">
+    <value>La operación fue cancelada.</value>
+  </data>
+
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Correo o contraseña inválidos.</value>
+  </data>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Ocurrió un error inesperado.</value>
+  </data>
+  <data name="DeviceNotFound" xml:space="preserve">
+    <value>Dispositivo no encontrado.</value>
+  </data>
+  <data name="DeviceUpdateFailed" xml:space="preserve">
+    <value>Ocurrió un error al actualizar los datos del sensor del dispositivo.</value>
+  </data>
+  <data name="EstablishmentCreationFailed" xml:space="preserve">
+    <value>Ocurrió un error al crear el establecimiento.</value>
+  </data>
+  <data name="OperatorNotFound" xml:space="preserve">
+    <value>Operador no encontrado.</value>
+  </data>
+  <data name="OperatorUpdateFailed" xml:space="preserve">
+    <value>Ocurrió un error al actualizar el operador.</value>
+  </data>
+  <data name="SubscriptionNotFound" xml:space="preserve">
+    <value>Suscripción no encontrada.</value>
+  </data>
+</root>

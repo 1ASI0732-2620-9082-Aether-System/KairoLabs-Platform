@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="GenericError" xml:space="preserve">
+    <value>An error occurred.</value>
+  </data>
+  <data name="OperationCancelled" xml:space="preserve">
+    <value>The operation was cancelled.</value>
+  </data>
+
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid email or password.</value>
+  </data>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>An unexpected error occurred.</value>
+  </data>
+  <data name="DeviceNotFound" xml:space="preserve">
+    <value>Device not found.</value>
+  </data>
+  <data name="DeviceUpdateFailed" xml:space="preserve">
+    <value>An error occurred while updating the device sensor data.</value>
+  </data>
+  <data name="EstablishmentCreationFailed" xml:space="preserve">
+    <value>An error occurred while creating the establishment.</value>
+  </data>
+  <data name="OperatorNotFound" xml:space="preserve">
+    <value>Operator not found.</value>
+  </data>
+  <data name="OperatorUpdateFailed" xml:space="preserve">
+    <value>An error occurred while updating the operator.</value>
+  </data>
+  <data name="SubscriptionNotFound" xml:space="preserve">
+    <value>Subscription not found.</value>
+  </data>
+</root>
