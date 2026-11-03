@@ -1,4 +1,4 @@
-﻿param([ValidateSet('spec','tap')][string]$Reporter = 'spec')
+﻿param([ValidateSet('spec','tap')][string]$Reporter = 'spec', [ValidateSet('integration','bdd')][string]$Suite='integration', [string]$FrontendRoot='')
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 Set-Location -LiteralPath $projectRoot
@@ -47,6 +47,7 @@ try {
     $env:MYSQL_PWD = ''
     Write-Host '[1/5] Compilando backend ASP.NET Core 10...'
     & $dotnet build (Join-Path $apiProject 'TechnoByteLambders.MediTrackSensor.Platform.csproj') -c Release --nologo -v quiet *> (Join-Path $runtimeRoot 'build.log')
+    Copy-Item -LiteralPath (Join-Path $runtimeRoot 'build.log') -Destination (Join-Path $projectRoot 'evidence/build-warnings.txt') -Force
     if ($LASTEXITCODE -ne 0) { throw "No compila el backend. Revisar .runtime/build.log" }
     if (!(Test-Path -LiteralPath (Join-Path $projectRoot 'frontend/node_modules/vite/bin/vite.js'))) {
         Push-Location (Join-Path $projectRoot 'frontend')
@@ -100,13 +101,20 @@ try {
         Start-Sleep -Milliseconds 500
     }
     if (!$apiReady) { throw 'La API o su esquema no estan listos. Revisar .runtime/api.stdout.log' }
-    Write-Host '[4/5] Ejecutando 14 pruebas con API y MySQL reales...'
+    Write-Host ('[4/5] Ejecutando suite ' + $Suite + ' con API y MySQL reales...')
     $env:KAIROLABS_IT_URL = 'http://127.0.0.1:5187'
     $env:KAIROLABS_IT_DATABASE = $databaseName
     $env:KAIROLABS_MYSQL_CLIENT = $mysqlClient
-    & node --test "--test-reporter=$Reporter" --test-reporter=tap --test-reporter-destination=stdout --test-reporter-destination=evidence/latest.tap tests/integration.test.mjs
-    $testExit = $LASTEXITCODE
+    if ($Suite -eq 'bdd') {
+        if (!$FrontendRoot -or !(Test-Path -LiteralPath (Join-Path $FrontendRoot 'bdd/run.mjs'))) { throw 'FrontendRoot no contiene la suite BDD.' }
+        Push-Location -LiteralPath $FrontendRoot
+        try { & node bdd/run.mjs; $testExit=$LASTEXITCODE } finally { Pop-Location }
+    } else {
+        & node --test "--test-reporter=$Reporter" --test-reporter=tap --test-reporter-destination=stdout --test-reporter-destination=evidence/latest.tap tests/integration.test.mjs
+    }
+    if ($Suite -ne 'bdd') { $testExit = $LASTEXITCODE }
 } finally {
+    if (Test-Path -LiteralPath (Join-Path $runtimeRoot 'api.stdout.log')) { Copy-Item -LiteralPath (Join-Path $runtimeRoot 'api.stdout.log') -Destination (Join-Path $projectRoot 'evidence/startup-diagnostics.txt') -Force }
     Write-Host '[5/5] Cerrando procesos y eliminando exclusivamente la base temporal...'
     if ($apiProcess -and !$apiProcess.HasExited) { Stop-Process -Id $apiProcess.Id -Force }
     if ($createdDatabase -and $mysqlProcess -and !$mysqlProcess.HasExited) {
