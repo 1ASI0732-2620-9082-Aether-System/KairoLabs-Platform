@@ -47,7 +47,7 @@ try {
     $env:MYSQL_PWD = ''
     Write-Host '[1/5] Compilando backend ASP.NET Core 10...'
     & $dotnet build (Join-Path $apiProject 'TechnoByteLambders.MediTrackSensor.Platform.csproj') -c Release --nologo -v quiet *> (Join-Path $runtimeRoot 'build.log')
-    Copy-Item -LiteralPath (Join-Path $runtimeRoot 'build.log') -Destination (Join-Path $projectRoot 'evidence/build-warnings.txt') -Force
+    [IO.File]::WriteAllText((Join-Path $projectRoot 'evidence/build-warnings.txt'), (Get-Content -LiteralPath (Join-Path $runtimeRoot 'build.log') -Raw), (New-Object Text.UTF8Encoding($false)))
     if ($LASTEXITCODE -ne 0) { throw "No compila el backend. Revisar .runtime/build.log" }
     if (!(Test-Path -LiteralPath (Join-Path $projectRoot 'frontend/node_modules/vite/bin/vite.js'))) {
         Push-Location (Join-Path $projectRoot 'frontend')
