@@ -1,0 +1,82 @@
+name: Core CI
+on:
+  push:
+    branches: [master, main, develop, 'feature/**', 'codex/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  backend-and-system:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - name: Require reviewed immutable companion revision
+        env:
+          FRONTEND_REF: ${{ vars.CI_FRONTEND_REF }}
+        run: |
+          if ($env:FRONTEND_REF -notmatch '^[a-f0-9]{40}$') { throw 'Configurar CI_FRONTEND_REF con el SHA revisado del frontend tras aprobar/publicar ambos cambios.' }
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: 1ASI0732-2620-9082-Aether-System/KairoLabs-Frontend
+          ref: ${{ vars.CI_FRONTEND_REF }}
+          path: KairoLabs-Frontend
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          path: KairoLabs-Platform
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.11.1'
+      - name: Inspect both build entry points
+        run: |
+          Set-Location KairoLabs-Frontend
+          node scripts/ci/guard-build.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/ci/prepare-evidence.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Set-Location ../KairoLabs-Platform
+          node scripts/ci/guard-build.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/ci/prepare-evidence.mjs
+          exit $LASTEXITCODE
+      - name: Install frontend dependencies
+        working-directory: KairoLabs-Frontend
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Companion lint, unit tests and build
+        working-directory: KairoLabs-Frontend
+        run: |
+          npm run lint
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run test:unit
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run build
+          exit $LASTEXITCODE
+      - name: Prepare portable .NET and MySQL
+        working-directory: KairoLabs-Platform
+        run: npm run setup
+      - name: Integration suite (14 cases)
+        working-directory: KairoLabs-Platform
+        run: npm test
+      - name: Install Chromium
+        working-directory: KairoLabs-Frontend
+        run: npx --no-install playwright install chromium
+      - name: BDD desktop and emulated mobile
+        working-directory: KairoLabs-Frontend
+        run: npm run test:bdd
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: real-system-${{ github.run_id }}
+          path: |
+            KairoLabs-Frontend/evidence/bdd/
+            KairoLabs-Platform/evidence/
+          retention-days: 14
+          if-no-files-found: warn
