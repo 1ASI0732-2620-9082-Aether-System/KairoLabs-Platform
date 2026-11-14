@@ -4,7 +4,7 @@ $projectRoot = Split-Path $PSScriptRoot -Parent
 Set-Location -LiteralPath $projectRoot
 $runtimeRoot = Join-Path $projectRoot '.runtime'
 New-Item -ItemType Directory -Force $runtimeRoot,(Join-Path $projectRoot 'evidence') | Out-Null
-$workspaceTools = [IO.Path]::GetFullPath((Join-Path $projectRoot '../../.tooling'))
+$workspaceTools = if ($env:KAIROLABS_TOOLS_ROOT) { [IO.Path]::GetFullPath($env:KAIROLABS_TOOLS_ROOT) } else { [IO.Path]::GetFullPath((Join-Path $projectRoot '../../.tooling')) }
 $dotnet = Join-Path $runtimeRoot 'dotnet/dotnet.exe'
 if (!(Test-Path -LiteralPath $dotnet)) { $dotnet = Join-Path $workspaceTools 'dotnet/dotnet.exe' }
 if (!(Test-Path -LiteralPath $dotnet)) {
@@ -46,9 +46,14 @@ try {
     $env:NUGET_PACKAGES = if (Test-Path -LiteralPath $workspaceTools) { Join-Path $workspaceTools 'nuget' } else { Join-Path $runtimeRoot 'nuget' }
     $env:MYSQL_PWD = ''
     Write-Host '[1/5] Compilando backend ASP.NET Core 10...'
-    & $dotnet build (Join-Path $apiProject 'TechnoByteLambders.MediTrackSensor.Platform.csproj') -c Release --nologo -v quiet *> (Join-Path $runtimeRoot 'build.log')
+    # PowerShell 5 treats native stderr as errors; the process exit code is authoritative.
+    try {
+        $ErrorActionPreference = 'Continue'
+        & $dotnet build (Join-Path $apiProject 'TechnoByteLambders.MediTrackSensor.Platform.csproj') -c Release --nologo -v quiet *> (Join-Path $runtimeRoot 'build.log')
+        $buildExit = $LASTEXITCODE
+    } finally { $ErrorActionPreference = 'Stop' }
     [IO.File]::WriteAllText((Join-Path $projectRoot 'evidence/build-warnings.txt'), (Get-Content -LiteralPath (Join-Path $runtimeRoot 'build.log') -Raw), (New-Object Text.UTF8Encoding($false)))
-    if ($LASTEXITCODE -ne 0) { throw "No compila el backend. Revisar .runtime/build.log" }
+    if ($buildExit -ne 0) { throw "No compila el backend. Revisar .runtime/build.log" }
     if (!(Test-Path -LiteralPath (Join-Path $projectRoot 'frontend/node_modules/vite/bin/vite.js'))) {
         Push-Location (Join-Path $projectRoot 'frontend')
         try { & npm.cmd ci --ignore-scripts --no-audit --no-fund; if ($LASTEXITCODE -ne 0) { throw 'Fallo npm ci' } } finally { Pop-Location }
